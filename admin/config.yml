@@ -1,0 +1,179 @@
+# RIDE EDU · Margens · configuração do painel de edição (Decap CMS)
+# Endereço do painel: https://rideedu.com.br/admin/
+# Configuração inicial (uma vez): ver COMO-USAR-O-PAINEL.txt
+
+backend:
+  name: github
+  repo: cleristonne/rideedu   # usuário/organização e nome do repositório no GitHub
+  branch: main
+  commit_messages:
+    create: "Margens: nova edição {{slug}}"
+    update: "Margens: edição {{slug}} atualizada"
+    delete: "Margens: edição {{slug}} excluída"
+    uploadMedia: "Margens: imagem {{path}}"
+    deleteMedia: "Margens: imagem {{path}} excluída"
+
+# Permite testar o painel no computador (npx decap-server); ignorado no site publicado
+local_backend: true
+
+locale: pt
+site_url: https://rideedu.com.br
+display_url: https://rideedu.com.br
+logo_url: /logo-ride-edu.png
+
+# Fotos enviadas pelo painel
+media_folder: newsletters/fotos
+public_folder: newsletters/fotos
+
+collections:
+  - name: edicoes
+    label: Edições do Margens
+    label_singular: Edição
+    description: >-
+      A edição mais recente (pela data no código da edição) é a que aparece na capa.
+      Marque "Rascunho" para preparar uma edição sem publicá-la.
+    folder: newsletters/edicoes
+    extension: js
+    format: margens-edicao
+    create: true
+    delete: false
+    slug: "{{fields.id}}"
+    identifier_field: id
+    summary: "{{rotulo}}{{oculta | ternary(' · RASCUNHO', '')}}"
+    sortable_fields: [id, rotulo]
+    filter: { field: formato, value: secoes }
+    editor:
+      preview: false
+    fields:
+      - { name: formato, widget: hidden, default: secoes }
+      - name: id
+        label: Código da edição
+        widget: string
+        pattern: ['^\d{4}-\d{2}-\d{2}_[0-9-]+$', 'Use AAAA-MM-DD_DD (ex.: 2026-11-27_12-03 para 27/11 a 3/12)']
+        hint: "Data de início no formato AAAA-MM-DD, sublinhado e o dia final (ou dia-mês). Define a ordem das edições e o endereço das reportagens. Não mude depois de publicar."
+      - { name: oculta, label: "Rascunho (não aparece no site)", widget: boolean, default: true, required: false,
+          hint: "Desmarque quando a edição estiver pronta. Ao publicar sem rascunho, ela vira a capa se for a mais recente." }
+      - { name: rotulo, label: "Nome no seletor de edições", widget: string, hint: "Ex.: 27 nov. a 3 dez. 2026" }
+      - { name: weekLabel, label: "Linha da semana", widget: string, hint: "Ex.: Semana de 27 de novembro a 3 de dezembro de 2026" }
+      - { name: shortDate, label: "Data curta", widget: string, hint: "Ex.: 27 nov. a 3 dez. 2026" }
+      - { name: dateLabel, label: "Data de fechamento", widget: string, hint: "Ex.: 3 de dezembro de 2026" }
+      - { name: footerStamp, label: "Selo do rodapé", widget: string, hint: "Ex.: Edição de 03/12/2026" }
+      - { name: footerSource, label: "Fonte editorial (rodapé)", widget: string, hint: "Ex.: Fonte editorial: Margens · 27 de novembro a 3 de dezembro de 2026" }
+      - { name: pdf, label: "PDF da edição (opcional)", widget: file, required: false, media_folder: /newsletters, public_folder: newsletters }
+
+      - name: spotlight
+        label: Manchete do topo
+        widget: object
+        collapsed: false
+        fields:
+          - { name: rubric, label: Chapéu, widget: string, hint: "Ex.: Capa · Financiamento" }
+          - { name: title, label: "Título", widget: string, hint: "Para abrir a reportagem, use exatamente o mesmo título de uma das matérias abaixo." }
+          - { name: dek, label: "Linha fina", widget: text, required: false }
+          - { name: note, label: "Nota (opcional)", widget: text, required: false }
+
+      - name: stats
+        label: Números da semana
+        label_singular: Número
+        widget: list
+        summary: "{{fields.rubric}}: {{fields.value}}"
+        fields:
+          - { name: rubric, label: Chapéu, widget: string }
+          - { name: value, label: "Número", widget: string }
+          - { name: label, label: "Legenda", widget: string }
+          - { name: color, label: Cor, widget: select, default: blue, options: [blue, green, amber, terra] }
+
+      - name: sections
+        label: Seções do noticiário
+        label_singular: Seção
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: title, label: "Título da seção", widget: string, hint: "Ex.: Na RIDE Petrolina–Juazeiro" }
+          - { name: kicker, label: "Subtítulo da seção", widget: string, required: false, hint: "Ex.: Oito municípios · pauta regional" }
+          - name: stories
+            label: Reportagens
+            label_singular: Reportagem
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: rubric, label: "Chapéu", widget: string, hint: "Ex.: Juazeiro (BA) · 24/11" }
+              - { name: title, label: "Título", widget: string, hint: "O endereço da reportagem é feito a partir do título: não mude depois de publicar." }
+              - { name: dek, label: "Linha fina", widget: text, required: false, hint: "Frase abaixo do título. Aparece também na capa." }
+              - { name: byline, label: "Assinatura", widget: string, required: false, default: "Redação Margens" }
+              - { name: photo, label: "Foto", widget: image, required: false, choose_url: true, hint: "Envie uma imagem ou cole o endereço de uma imagem." }
+              - { name: credit, label: "Crédito da foto", widget: string, required: false, hint: "Ex.: Foto: Fulano/Ascom SEC" }
+              - { name: photoSource, label: "Link de origem da foto", widget: string, required: false }
+              - name: corpo
+                label: Texto da reportagem
+                widget: text
+                hint: >-
+                  Parágrafos separados por uma linha em branco. Intertítulo: comece a linha com "## ".
+                  Link: [texto](https://endereço). O primeiro parágrafo deve ser texto (não intertítulo).
+              - { name: service, label: "Para a gestão", widget: text, required: false }
+              - { name: sourceLabel, label: "Fonte (veículo)", widget: string, required: false, hint: "Ex.: SEC Bahia" }
+              - { name: sourceUrl, label: "Link da fonte original", widget: string, required: false }
+              - { name: published, label: "Data de publicação na fonte", widget: string, required: false, hint: "Ex.: 25/11/2026" }
+
+      - name: editorial
+        label: Editorial
+        widget: object
+        fields:
+          - { name: rubric, label: "Chapéu", widget: string, default: "Editorial · Margens" }
+          - { name: title, label: "Título", widget: string }
+          - { name: byline, label: "Assinatura", widget: string, default: "Redação RIDE EDU" }
+          - { name: place, label: "Data/local", widget: string, required: false }
+          - { name: corpo, label: "Texto", widget: text, hint: "Parágrafos separados por uma linha em branco." }
+
+      - name: documentWeek
+        label: Documento da semana
+        widget: object
+        required: false
+        fields:
+          - { name: rubric, label: "Chapéu", widget: string, default: "Documento da semana" }
+          - { name: title, label: "Título", widget: string }
+          - { name: body, label: "Texto", widget: text }
+          - { name: link, label: "Link", widget: string, required: false }
+          - { name: linkLabel, label: "Texto do botão", widget: string, required: false }
+
+      - { name: agendaSub, label: "Subtítulo da agenda", widget: string, required: false, hint: "Ex.: Prazos para gestores e famílias" }
+      - name: agenda
+        label: Agenda da gestão
+        label_singular: Compromisso
+        widget: list
+        summary: "{{fields.day}}/{{fields.month}} · {{fields.label}}"
+        fields:
+          - name: kind
+            label: Tipo
+            widget: select
+            default: ate
+            options:
+              - { label: "Prazo final (até)", value: ate }
+              - { label: "Data única", value: data }
+              - { label: "Período (de... a...)", value: intervalo }
+              - { label: "Previsto / acompanhar", value: previsto }
+          - { name: day, label: "Dia", widget: string, required: false, hint: "Ex.: 27" }
+          - { name: month, label: "Mês", widget: string, required: false, hint: "Ex.: nov" }
+          - { name: endDay, label: "Dia final (só para período)", widget: string, required: false }
+          - { name: endMonth, label: "Mês final (só para período)", widget: string, required: false }
+          - { name: display, label: "Texto no lugar da data (opcional)", widget: string, required: false, hint: "Ex.: Dezembro" }
+          - { name: tag, label: "Etiqueta", widget: string, required: false, hint: "Ex.: Prazo" }
+          - { name: label, label: "Quem/o quê", widget: string, hint: "Ex.: Pernambuco" }
+          - { name: text, label: "Descrição", widget: string }
+
+      - name: themes
+        label: Leitura temática
+        label_singular: Tema
+        widget: list
+        summary: "{{fields.rubrica}}"
+        fields:
+          - { name: rubrica, label: "Tema", widget: string }
+          - { name: texto, label: "Texto", widget: string }
+
+      - name: sources
+        label: Fontes consultadas
+        label_singular: Fonte
+        widget: list
+        summary: "{{fields.label}}"
+        fields:
+          - { name: label, label: "Descrição", widget: string, hint: "Ex.: SEC Bahia · Título da notícia" }
+          - { name: url, label: "Link", widget: string }

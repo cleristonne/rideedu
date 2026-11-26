@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel do Margens · RIDE EDU</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>window.CMS_MANUAL_INIT = true;</script>
+</head>
+<body>
+<!-- Painel de edição do Margens (Decap CMS). Configuração: admin/config.yml -->
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script src="formato-margens.js?v=20261126-6"></script>
+<script>
+  (function () {
+    var CMS = window.CMS;
+    CMS.registerCustomFormat("margens-edicao", "js", {
+      fromFile: function (texto) { return window.MargensFormato.fromFile(texto); },
+      toFile: function (dados) {
+        // o painel pode entregar estruturas imutáveis; converte para objeto comum
+        var d = dados && typeof dados.toJS === "function" ? dados.toJS() : dados;
+        return window.MargensFormato.toFile(d);
+      }
+    });
+    CMS.init();
+  })();
+</script>
+</body>
+</html>
