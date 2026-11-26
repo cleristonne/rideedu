@@ -1,0 +1,71 @@
+/* RIDE EDU · Margens · página da reportagem (materia.html)
+   Padrão de página de matéria de jornal: chapéu, título grande em
+   serifa, linha de edição e fonte, foto na largura do texto, texto
+   em coluna estreita e confortável, "mais desta edição" no fim.
+   Usa as variáveis --jn-* de noticioso.css. */
+body.mt-page{background:#FFFFFF !important;background-image:none !important}
+body.mt-page main::before,body.mt-page main::after{display:none !important}
+.mt-main{max-width:1180px;margin:0 auto;padding:36px clamp(20px,4vw,48px) 64px;font-family:var(--jn-serif);color:var(--jn-text)}
+.mt-loading{font-family:var(--jn-sans);font-size:15px;color:var(--jn-gray);padding:48px 0}
+.mt-loading a{color:var(--jn-blue);font-weight:600}
+
+.mt-article{max-width:760px;margin:0 auto}
+.mt-crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;font-family:var(--jn-serif);font-size:17px;font-weight:700;color:var(--jn-blue);text-transform:lowercase;margin:0 0 18px;padding-bottom:10px;border-bottom:3px solid var(--jn-blue)}
+.mt-crumbs a{color:var(--jn-blue);text-decoration:none;text-transform:none}
+.mt-crumbs a:hover{text-decoration:underline;text-underline-offset:3px}
+.mt-crumbs span{font-weight:400}
+.mt-kicker{font-family:var(--jn-sans);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--jn-kicker);margin:0 0 12px}
+.mt-title{font-family:var(--jn-serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);line-height:1.08;letter-spacing:-.012em;color:var(--jn-ink);margin:0 0 20px;font-variation-settings:"opsz" 60;text-wrap:balance;hyphens:manual}
+.mt-title-ed{font-style:italic;font-weight:500}
+.mt-dek{font-family:var(--jn-sans);font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--jn-gray);margin:-6px 0 22px;max-width:62ch}
+.mt-subhead{font-family:var(--jn-serif);font-size:25px;font-weight:700;line-height:1.2;color:var(--jn-ink);margin:36px 0 14px;hyphens:manual}
+.mt-meta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 24px;font-family:var(--jn-sans);font-size:13px;line-height:1.55;color:var(--jn-gray);padding:14px 0;border-top:1px solid var(--jn-rule);border-bottom:1px solid var(--jn-rule);margin:0 0 28px}
+.mt-meta strong{color:var(--jn-ink);font-weight:600}
+.mt-share{display:flex;gap:8px;flex-wrap:wrap}
+.mt-share-btn{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border:1px solid var(--jn-rule);background:#FFFFFF;color:var(--jn-ink);font-family:var(--jn-sans);font-size:13px;font-weight:600;text-decoration:none;cursor:pointer}
+.mt-share-btn:hover{border-color:var(--jn-ink)}
+.mt-share-btn:focus-visible{outline:2px solid var(--jn-blue);outline-offset:2px}
+
+.mt-photo{margin:0 0 28px}
+.mt-photo img{display:block;width:100%;height:auto;max-height:560px;object-fit:cover}
+.mt-photo figcaption{font-family:var(--jn-sans);font-size:13px;line-height:1.45;color:var(--jn-gray);margin-top:8px}
+.mt-photo figcaption a{color:var(--jn-blue)}
+
+.mt-body,.mt-body.np-ed-body{max-width:680px;margin:0 auto;columns:auto !important;column-rule:none !important;font-family:var(--jn-serif) !important;font-size:20px !important;line-height:1.65 !important;color:var(--jn-text) !important}
+.mt-body p{font-size:20px !important;line-height:1.65 !important;margin:0 0 22px !important;text-align:left !important;hyphens:manual}
+.mt-body a{color:var(--jn-blue);text-decoration:underline;text-underline-offset:2px}
+.mt-body blockquote{font-family:var(--jn-serif);font-style:italic;font-size:26px;line-height:1.3;color:var(--jn-ink);border-left:3px solid var(--jn-blue);margin:28px 0;padding:2px 0 2px 20px}
+
+.mt-service{max-width:680px;margin:8px auto 24px;border-left:3px solid var(--jn-blue);padding:4px 0 4px 16px;font-family:var(--jn-sans)}
+.mt-service strong{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--jn-blue);margin-bottom:4px}
+.mt-service p{margin:0;font-size:16px;line-height:1.55;color:var(--jn-text)}
+.mt-source{max-width:680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding:14px 0;border-top:1px solid var(--jn-rule);font-family:var(--jn-sans);font-size:13px;color:var(--jn-gray)}
+.mt-source a{color:var(--jn-blue);font-weight:600}
+.mt-back{max-width:680px;margin:20px auto 0;font-family:var(--jn-sans);font-size:14px}
+.mt-back a{color:var(--jn-blue);font-weight:600;text-decoration:none}
+.mt-back a:hover{text-decoration:underline;text-underline-offset:3px}
+
+.mt-more{max-width:1080px;margin:64px auto 0;border-top:3px solid var(--jn-blue);padding-top:12px}
+.mt-more h2{font-family:var(--jn-serif);font-size:28px;font-weight:700;color:var(--jn-blue);margin:0;text-transform:lowercase}
+.mt-more-sub{font-family:var(--jn-serif);font-size:16px;color:var(--jn-blue);margin:2px 0 14px}
+.mt-more ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));column-gap:41px;overflow:hidden}
+.mt-more li{position:relative;border-top:1px solid var(--jn-rule)}
+.mt-more li::before{content:"";position:absolute;left:-21px;top:14px;bottom:14px;border-left:1px solid var(--jn-rule)}
+.mt-more a{display:block;padding:14px 0 18px;text-decoration:none;font-family:var(--jn-serif);font-size:19px;font-weight:600;line-height:1.25;color:var(--jn-ink)}
+.mt-more a span{display:block;font-family:var(--jn-sans);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--jn-kicker);margin-bottom:6px}
+.mt-more a:hover{color:var(--jn-blue)}
+
+.mt-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;max-width:1180px;margin:0 auto;padding:20px clamp(20px,4vw,48px) 40px;border-top:1px solid var(--jn-rule-strong);font-family:var(--jn-sans);font-size:13px;color:var(--jn-gray)}
+.mt-footer-brand{color:var(--jn-ink);text-decoration:none}
+.mt-footer-brand strong{font-family:var(--jn-serif);font-size:18px;text-transform:uppercase;letter-spacing:.02em}
+
+@media (max-width:640px){
+  .mt-main{padding-top:24px}
+  .mt-body p,.mt-body.np-ed-body{font-size:18px !important}
+  .mt-meta{flex-direction:column;align-items:flex-start}
+}
+@media print{
+  body.mt-page > header,.mt-share,.mt-more,.mt-back,.rn-drawer{display:none !important}
+  .mt-main{padding:0}
+  .mt-body p{font-size:13pt !important}
+}

@@ -1,0 +1,6 @@
+/* Fotografias das matérias do Vale Educa */
+.np-news-photo{margin:14px 0 18px}
+.np-news-photo img{display:block;width:100%;max-height:400px;object-fit:cover;border-radius:4px}
+.np-news-photo figcaption{font-size:12px;color:#555;margin-top:6px}
+.np-photo-unavailable img{display:none}
+.np-photo-unavailable figcaption:before{content:"Imagem indisponível no servidor de origem. "}
