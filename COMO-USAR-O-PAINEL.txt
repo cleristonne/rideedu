@@ -1,0 +1,133 @@
+RIDE EDU · MARGENS · PAINEL DE EDIÇÃO (atualizar sem enviar a pasta)
+(26/11/2026)
+
+O QUE MUDA
+  Hoje: cada atualização exige enviar a pasta inteira ao Netlify.
+  Com o painel: você entra em https://rideedu.com.br/admin/, edita a
+  edição em formulários e clica em "Publicar". O site se atualiza
+  sozinho em cerca de 1 a 2 minutos.
+
+  Como funciona: o site passa a ficar guardado no GitHub (serviço
+  gratuito de guarda de arquivos com histórico). O painel grava as
+  mudanças lá, e o Netlify publica cada mudança automaticamente.
+  Toda alteração fica registrada e pode ser desfeita.
+
+══════════════════════════════════════════════════════════════
+CONFIGURAÇÃO (UMA VEZ SÓ, CERCA DE 30 MINUTOS)
+══════════════════════════════════════════════════════════════
+
+1. GUARDAR O SITE NO GITHUB
+   a) Crie uma conta em https://github.com (se ainda não tiver).
+   b) Crie um repositório: botão "New", nome "rideedu", marque
+      "Private" (privado) e clique em "Create repository".
+   c) Envie os arquivos desta pasta para o repositório. O mais fácil
+      é o programa GitHub Desktop (https://desktop.github.com):
+      File > Add local repository > escolher esta pasta > "create a
+      repository" > Publish repository (mantenha "Keep this code
+      private" marcado).
+      Alternativa sem programa: na página do repositório, "uploading
+      an existing file" e arraste todo o conteúdo desta pasta.
+      A ramificação (branch) deve se chamar "main".
+
+2. LIGAR O NETLIFY AO GITHUB
+   a) No Netlify, abra o projeto "rideeducacao".
+   b) Project configuration > Build & deploy > Continuous deployment >
+      "Link repository" (ou "Link to Git") > GitHub > escolha "rideedu".
+   c) Confirme: branch "main"; publish directory "."; o comando de
+      build já vem do arquivo netlify.toml. Salve.
+   d) Aguarde a primeira publicação e confira o site.
+   A partir daqui, NÃO envie mais a pasta arrastando para o Netlify:
+   a próxima publicação pelo GitHub substituiria o que foi arrastado.
+
+3. AUTORIZAR O LOGIN DO PAINEL (GitHub + Netlify)
+   a) No GitHub: foto do perfil > Settings > Developer settings >
+      OAuth Apps > New OAuth App. Preencha:
+        Application name:  Painel Margens
+        Homepage URL:      https://rideedu.com.br
+        Authorization callback URL:  https://api.netlify.com/auth/done
+      Clique em "Register application", depois em "Generate a new
+      client secret". Copie o Client ID e o Client secret.
+   b) No Netlify: Project configuration > Access & security > OAuth >
+      Authentication providers > Install provider > GitHub. Cole o
+      Client ID e o Client secret e salve.
+   Guarde o Client secret como uma senha: não o envie por mensagem.
+
+4. INDICAR O REPOSITÓRIO AO PAINEL
+   No GitHub, abra o arquivo admin/config.yml, clique no lápis
+   (editar) e troque a linha
+       repo: cleristonne/rideedu (já configurado)
+   pelo seu usuário (ou organização) e o nome do repositório, por
+   exemplo:  repo: fulano/rideedu
+   Clique em "Commit changes". O site se republica sozinho.
+
+5. ENTRAR
+   Abra https://rideedu.com.br/admin/ e clique em "Entrar com o
+   GitHub". Só quem tem acesso ao repositório consegue editar.
+   Para dar acesso a outra pessoa da equipe: no repositório,
+   Settings > Collaborators > Add people.
+
+══════════════════════════════════════════════════════════════
+USO NO DIA A DIA
+══════════════════════════════════════════════════════════════
+
+CORRIGIR UMA MATÉRIA JÁ PUBLICADA
+  Edições do Margens > abrir a edição > editar o campo > Publicar >
+  Publicar agora. Em 1 a 2 minutos o site mostra a correção.
+  Não mude o TÍTULO de matérias já publicadas: o endereço da página da
+  reportagem é feito a partir dele (links compartilhados quebrariam).
+
+CRIAR A EDIÇÃO DA SEMANA (a partir da anterior)
+  1. Abra a edição mais recente. No menu do botão de publicar,
+     escolha "Duplicar" (ou, se houver mudança não salva, "Publicar e
+     duplicar").
+  2. Na cópia, ANTES de tudo:
+       - troque o "Código da edição" (ex.: 2026-11-27_12-03);
+       - marque "Rascunho (não aparece no site)".
+  3. Troque datas, manchete, números, seções, reportagens, editorial,
+     agenda, temas e fontes. Pode publicar (salvar) quantas vezes
+     quiser: enquanto for rascunho, o site não muda.
+  4. Pronta a edição, desmarque "Rascunho" e clique em Publicar.
+     A edição mais recente (pelo código) vira a capa; a anterior vai
+     para o arquivo de edições.
+
+TEXTO DAS REPORTAGENS (campo "Texto da reportagem")
+  - Parágrafos separados por uma linha em branco.
+  - Intertítulo: linha que começa com "## ". Ex.: ## Próximos passos
+  - Link: [texto do link](https://endereço)
+  - O primeiro parágrafo deve ser texto (não intertítulo).
+  - "Linha fina": frase abaixo do título; aparece também na capa.
+
+FOTOS
+  No campo "Foto", envie a imagem do computador (vai para
+  newsletters/fotos/) ou cole o endereço de uma imagem já publicada.
+  Informe sempre o crédito.
+
+SE ALGO DER ERRADO
+  - A cada publicação, o Netlify confere as edições
+    (ferramentas/validar-edicoes.js). Se houver erro, a publicação é
+    recusada e o site continua com a versão anterior. O motivo aparece
+    no Netlify, em Deploys > (a publicação com falha) > Deploy log.
+  - Para desfazer: no GitHub, abra o arquivo da edição > History >
+    escolha a versão anterior; ou peça ajuda para reverter o commit.
+
+O QUE O PAINEL NÃO EDITA
+  - A edição de 8 a 14/8/2026, que usa o formato antigo (sem seções):
+    continua editável à mão, no arquivo.
+  - Seções de dados, gráficos e páginas fixas do site.
+
+══════════════════════════════════════════════════════════════
+ARQUIVOS DO PAINEL (para manutenção)
+══════════════════════════════════════════════════════════════
+  admin/index.html          página do painel (Decap CMS, gratuito)
+  admin/config.yml          campos do formulário e repositório do GitHub
+  admin/formato-margens.js  leitura/gravação dos arquivos de edição
+  newsletters/lista.js      lista de edições (gerada sozinha)
+  newsletters/carregar.js   carrega as edições da lista no site
+  ferramentas/gerar-lista.js  gera a lista (roda a cada publicação)
+  netlify.toml              manda o Netlify gerar a lista e conferir
+
+TESTAR O PAINEL NO COMPUTADOR (opcional, para quem mantém o site)
+  Na pasta do site:  npx decap-server
+  Em outra janela:   python3 -m http.server 8080
+  Abra http://localhost:8080/admin/ e clique em "Entrar". As mudanças
+  são gravadas direto nos arquivos da pasta.

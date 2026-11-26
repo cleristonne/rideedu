@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+  # A cada publicação pelo painel (/admin), o Netlify refaz a lista de edições
+  # e confere os arquivos. Se houver erro, a publicação é recusada e o site
+  # continua com a versão anterior.
+  command = "node ferramentas/gerar-lista.js && node ferramentas/validar-edicoes.js"
+
+[[redirects]]
+  from = "/api/vaar"
+  to = "/.netlify/functions/vaar"
+  status = 200
+  force = true

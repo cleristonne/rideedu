@@ -1,0 +1,1 @@
+Edição 20–26/11/2026. Mantém histórico e módulos existentes. Fotografias externas de fontes oficiais: créditos e links no texto. Algumas notícias sem fotografia verificada; imagens externas dependem da disponibilidade e autorização da origem. Não publicado em servidor.

@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIDE EDU | Dados educacionais do Vale do São Francisco</title>
+<meta name="description" content="Indicadores educacionais, financeiros e territoriais dos oito municípios da RIDE do Polo Petrolina e Juazeiro.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<meta name="theme-color" content="#0B1530">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Prévia de compartilhamento (WhatsApp, Instagram, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RIDE EDU">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://rideedu.com.br/">
+<meta property="og:title" content="RIDE EDU | Dados educacionais do Vale do São Francisco">
+<meta property="og:description" content="Margens, noticiário de educação no Vale do São Francisco, e indicadores de orçamento, aprendizagem, rede e território dos oito municípios da RIDE do Polo Petrolina–Juazeiro.">
+<meta property="og:image" content="https://rideedu.com.br/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RIDE EDU — dados educacionais do Vale do São Francisco, Polo Petrolina–Juazeiro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RIDE EDU | Dados educacionais do Vale do São Francisco">
+<meta name="twitter:description" content="Margens, noticiário de educação no Vale do São Francisco, e indicadores de orçamento, aprendizagem, rede e território dos oito municípios da RIDE do Polo Petrolina–Juazeiro.">
+<meta name="twitter:image" content="https://rideedu.com.br/og-image.png">
+<!-- Fontes: somente as duas usadas pelo site (Bricolage Grotesque e Inter) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Inter:wght@400..700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ideb2025.css?v=20260806-1">
+<link rel="stylesheet" href="css/ride-base.css?v=20261126-2">
+<!-- Redesign de novembro de 2026: folha de estilo que se sobrepõe às anteriores (fontes carregadas no início do head) -->
+<link rel="stylesheet" href="ride-novo.css?v=20261126-4">
+<script src="ride-novo.js?v=20261126-1"></script>
+<link rel="stylesheet" href="css/noticias-fotos.css?v=20261126-2">
+<link rel="stylesheet" href="css/noticioso.css?v=20261126-4">
+</head>
+<body>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html" title="Voltar à página de abertura" aria-label="RIDE EDU: voltar à página de abertura">
+      <div class="logo-mark" aria-label="RIDE EDU — selo do Polo Petrolina-Juazeiro">
+        <img src="data:image/png;base64,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" alt="Selo RIDE EDU — Petrolina e Juazeiro" />
+      </div>
+      <div class="logo-text">
+        <strong>RIDE <span class="edu-mark">EDU</span></strong>
+        <span>Polo Petrolina–Juazeiro</span>
+      </div>
+    </a>
+    <nav class="nav-scroll" aria-label="Navegação principal">
+      <button class="nav-tab nav-direct active" data-panel="noticias">Notícias</button>
+
+      <details class="nav-group">
+        <summary>Orçamento</summary>
+        <div class="nav-menu" role="group" aria-label="Orçamento e financiamento">
+          <button class="nav-tab" data-panel="financas">Recursos e aplicação</button>
+          <button class="nav-tab" data-panel="evolucao">Evolução 2020–2025</button>
+          <button class="nav-tab" data-panel="vaar">VAAR 2026</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Aprendizagem</summary>
+        <div class="nav-menu" role="group" aria-label="Aprendizagem e avaliação">
+          <button class="nav-tab" data-panel="ideb2025">Ideb 2025</button>
+          <button class="nav-tab" data-panel="ideb">Ideb na RIDE</button>
+          <button class="nav-tab" data-panel="calculadoras">Estime o Ideb</button>
+          <button class="nav-tab" data-panel="alfabetizacao">Alfabetização</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Rede e acesso</summary>
+        <div class="nav-menu" role="group" aria-label="Rede e acesso">
+          <button class="nav-tab" data-panel="infantil">Educação infantil</button>
+          <button class="nav-tab" data-panel="censo">Censo Escolar</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Território</summary>
+        <div class="nav-menu" role="group" aria-label="Território">
+          <button class="nav-tab" data-panel="visao">Visão geral</button>
+          <button class="nav-tab" data-panel="municipio">Por município</button>
+          <button class="nav-tab" data-panel="comparativo">Comparativo</button>
+          <button class="nav-tab" data-panel="desigualdades">Desigualdades</button>
+          <button class="nav-tab" data-panel="populacao">População</button>
+        </div>
+      </details>
+
+      <button class="nav-tab nav-direct" data-panel="apresentacao">Sobre</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════════ APRESENTAÇÃO ══════════════════ -->
+<section class="panel" id="panel-apresentacao">
+
+  <div class="hero">
+    <div class="hero-head">
+      <div>
+        <div class="hero-eyebrow">Portal temático — RIDE do São Francisco</div>
+        <h2>Dados orçamentários e indicadores educacionais <span class="accent">na RIDE do Polo Petrolina e Juazeiro</span></h2>
+        <p>Uma plataforma comparativa com indicadores de acesso, desempenho, estrutura, finanças e desigualdades educacionais nos oito municípios da RIDE — com dados atualizados até 2025.</p>
+        <div class="hero-badges">
+          <div class="hero-badge"><span class="pulse"></span> 8 municípios</div>
+          <div class="hero-badge"><span class="pulse"></span> Séries 2010–2025</div>
+          <div class="hero-badge"><span class="pulse"></span> Educação · Finanças · População</div>
+        </div>
+      </div>
+      <!-- ── Logo da RIDE ── -->
+      <div class="hero-brand">
+        <svg class="vale-scene" viewBox="0 0 520 560" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Ilustração do Vale do São Francisco: ponte Presidente Dutra sobre o rio, barco com carranca e mandacarus">
+  <defs>
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBEACB"/><stop offset=".55" stop-color="#F7D69B"/><stop offset="1" stop-color="#F2C67F"/>
+    </linearGradient>
+    <linearGradient id="rio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2F8489"/><stop offset=".5" stop-color="#14696F"/><stop offset="1" stop-color="#0D474F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- céu do entardecer -->
+  <rect x="0" y="0" width="520" height="340" fill="url(#ceu)"/>
+
+  <!-- sol de xilogravura -->
+  <g transform="translate(392,108)" class="cena-sol">
+    <circle class="sol-halo" r="70" fill="#F6C860" opacity="0"/>
+    <g class="sol-raios" stroke="#D89426" stroke-width="7" stroke-linecap="round" opacity=".85">
+      <line x1="0" y1="-72" x2="0" y2="-92"/><line x1="0" y1="72" x2="0" y2="86"/>
+      <line x1="-72" y1="0" x2="-92" y2="0"/><line x1="72" y1="0" x2="92" y2="0"/>
+      <line x1="-51" y1="-51" x2="-65" y2="-65"/><line x1="51" y1="-51" x2="65" y2="-65"/>
+      <line x1="-51" y1="51" x2="-65" y2="65"/><line x1="51" y1="51" x2="65" y2="65"/>
+    </g>
+    <circle r="56" fill="#E4A62F"/>
+    <circle r="56" fill="none" stroke="#C98A1D" stroke-width="4"/>
+    <circle r="40" fill="none" stroke="#F1C05A" stroke-width="3" opacity=".8"/>
+  </g>
+
+  <!-- pássaros -->
+  <g class="cena-passaros" stroke="#5A4326" stroke-width="3" fill="none" stroke-linecap="round" opacity=".75">
+    <path d="M96 96 q10 -10 20 0 q10 -10 20 0"/>
+    <path d="M160 132 q8 -8 16 0 q8 -8 16 0"/>
+    <path d="M70 158 q7 -7 14 0 q7 -7 14 0"/>
+  </g>
+
+  <!-- serras da caatinga ao fundo -->
+  <path d="M0 258 L70 210 L128 250 L196 206 L262 252 L330 214 L396 250 L458 218 L520 252 L520 300 L0 300 Z" fill="#C9A05C" opacity=".55"/>
+  <path d="M0 282 L58 244 L124 278 L210 240 L292 280 L376 246 L452 278 L520 250 L520 320 L0 320 Z" fill="#A9853F" opacity=".45"/>
+
+  <!-- casario Petrolina (esq.) e Juazeiro (dir.) -->
+  <g>
+    <g fill="#BE5127">
+      <rect x="6" y="270" width="30" height="42"/><rect x="42" y="282" width="24" height="30"/><rect x="98" y="278" width="26" height="34"/>
+      <rect x="452" y="276" width="26" height="36"/><rect x="486" y="284" width="28" height="28"/>
+    </g>
+    <g fill="#0D474F">
+      <rect x="72" y="266" width="22" height="46"/><rect x="130" y="288" width="22" height="24"/>
+      <rect x="422" y="284" width="24" height="28"/><rect x="392" y="272" width="24" height="40"/>
+    </g>
+    <g fill="#FBEACB">
+      <rect x="12" y="278" width="8" height="10"/><rect x="26" y="278" width="8" height="10"/>
+      <rect x="78" y="274" width="9" height="12"/><rect x="458" y="284" width="9" height="10"/>
+      <rect x="398" y="280" width="9" height="12"/><rect x="492" y="290" width="8" height="9"/>
+    </g>
+    <path d="M4 270 L21 258 L38 270 Z M70 266 L83 254 L96 266 Z M450 276 L465 264 L480 276 Z M390 272 L404 260 L418 272 Z" fill="#8F3B1C"/>
+    <!-- torre da igreja -->
+    <rect x="352" y="248" width="16" height="64" fill="#FFFDF8"/><path d="M348 248 L360 228 L372 248 Z" fill="#BE5127"/>
+    <line x1="360" y1="222" x2="360" y2="232" stroke="#5A4326" stroke-width="3"/><line x1="355" y1="226" x2="365" y2="226" stroke="#5A4326" stroke-width="3"/>
+  </g>
+
+  <!-- PONTE PRESIDENTE DUTRA -->
+  <g stroke="#2C2216" fill="none" stroke-linecap="round">
+    <!-- arco treliçado -->
+    <path d="M60 312 C150 216 370 216 460 312" stroke-width="9"/>
+    <line x1="40" y1="312" x2="480" y2="312" stroke-width="10"/>
+    <!-- pendurais -->
+    <g stroke-width="4" opacity=".9">
+      <line x1="110" y1="312" x2="110" y2="272"/><line x1="160" y1="312" x2="160" y2="250"/>
+      <line x1="210" y1="312" x2="210" y2="240"/><line x1="260" y1="312" x2="260" y2="238"/>
+      <line x1="310" y1="312" x2="310" y2="240"/><line x1="360" y1="312" x2="360" y2="250"/>
+      <line x1="410" y1="312" x2="410" y2="272"/>
+    </g>
+    <!-- diagonais da treliça -->
+    <g stroke-width="3.4" opacity=".8">
+      <line x1="110" y1="272" x2="160" y2="312"/><line x1="160" y1="250" x2="210" y2="312"/>
+      <line x1="210" y1="240" x2="260" y2="312"/><line x1="310" y1="240" x2="260" y2="312"/>
+      <line x1="360" y1="250" x2="310" y2="312"/><line x1="410" y1="272" x2="360" y2="312"/>
+    </g>
+  </g>
+  <!-- pilares -->
+  <rect x="98" y="312" width="20" height="60" fill="#2C2216"/>
+  <rect x="402" y="312" width="20" height="60" fill="#2C2216"/>
+  <rect x="250" y="312" width="20" height="60" fill="#2C2216"/>
+
+  <!-- RIO SÃO FRANCISCO -->
+  <rect x="0" y="336" width="520" height="120" fill="url(#rio)"/>
+  <g class="cena-ondas" stroke="#EAF4EF" stroke-width="4" fill="none" stroke-linecap="round" opacity=".65">
+    <path d="M24 366 q16 -8 32 0 q16 8 32 0"/>
+    <path d="M330 360 q14 -7 28 0 q14 7 28 0"/>
+    <path d="M96 404 q15 -7 30 0 q15 7 30 0"/>
+    <path d="M382 412 q15 -7 30 0 q15 7 30 0"/>
+    <path d="M210 434 q15 -7 30 0 q15 7 30 0"/>
+  </g>
+  <!-- reflexo do sol -->
+  <g class="cena-reflexo" stroke="#F1C05A" stroke-width="5" stroke-linecap="round" opacity=".6">
+    <line x1="376" y1="352" x2="418" y2="352"/><line x1="388" y1="370" x2="422" y2="370"/><line x1="380" y1="388" x2="406" y2="388"/>
+  </g>
+
+  <!-- BARCO com carranca e vela -->
+  <g class="cena-barco">
+  <g transform="translate(178,344)">
+    <path d="M60 62 L160 62 L146 88 L74 88 Z" fill="#8F3B1C" stroke="#2C2216" stroke-width="4"/>
+    <path d="M60 62 C50 58 44 48 46 36 C52 40 58 40 62 36 C64 46 64 54 60 62 Z" fill="#2C2216"/>
+    <circle cx="53" cy="42" r="3" fill="#FBEACB"/>
+    <line x1="112" y1="62" x2="112" y2="-16" stroke="#2C2216" stroke-width="5"/>
+    <path d="M112 -12 L112 54 L58 54 Z" fill="#FFFDF8" stroke="#2C2216" stroke-width="4"/>
+    <path d="M112 6 L112 22 L86 22 Z" fill="#BE5127" opacity=".9"/>
+    <path d="M116 -10 L156 2 L116 14 Z" fill="#E4A62F" stroke="#2C2216" stroke-width="3.5"/>
+  </g>
+  </g>
+
+  <!-- MARGEM em primeiro plano -->
+  <path d="M0 448 C120 428 200 462 320 448 C400 438 470 456 520 446 L520 560 L0 560 Z" fill="#C98A54"/>
+  <path d="M0 470 C140 452 260 486 400 468 C450 462 490 470 520 464 L520 560 L0 560 Z" fill="#B0703B"/>
+
+  <!-- MANDACARUS -->
+  <g stroke="#2C2216" stroke-width="4">
+    <g transform="translate(52,342)">
+      <path d="M0 128 L0 20 Q0 4 14 4 Q28 4 28 20 L28 128 Z" fill="#77863F"/>
+      <path d="M-30 60 Q-30 44 -18 44 Q-6 44 -6 58 L-6 78 L-30 78 Z" fill="#8A9A4B"/>
+      <rect x="-30" y="74" width="24" height="16" fill="#77863F" stroke="none"/>
+      <path d="M-30 88 L-6 88 L-6 128 L-30 128 Z" fill="none"/>
+      <path d="M34 78 Q34 60 46 60 Q58 60 58 76 L58 96 L34 96 Z" fill="#8A9A4B"/>
+      <line x1="14" y1="24" x2="14" y2="120" stroke="#5C6A2C" stroke-width="3"/>
+      <circle cx="14" cy="8" r="7" fill="#D9536B" stroke-width="3"/>
+    </g>
+    <g transform="translate(452,368)">
+      <path d="M0 112 L0 24 Q0 8 13 8 Q26 8 26 24 L26 112 Z" fill="#77863F"/>
+      <path d="M32 66 Q32 50 43 50 Q54 50 54 64 L54 84 L32 84 Z" fill="#8A9A4B"/>
+      <line x1="13" y1="26" x2="13" y2="106" stroke="#5C6A2C" stroke-width="3"/>
+      <circle cx="13" cy="12" r="6" fill="#D9536B" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
+      </div>
+    </div>
+    <div class="explore-dock" aria-labelledby="exploreTitle">
+      <div class="explore-copy">
+        <span class="explore-kicker">Comece por aqui</span>
+        <strong id="exploreTitle">Encontre o dado que precisa</strong>
+        <span>Escolha um tema ou acesse o retrato completo de um município.</span>
+      </div>
+      <label class="explore-field">
+        <span>Tema</span>
+        <select id="homeThemeSelect">
+          <option value="visao">Visão geral da RIDE</option>
+          <option value="infantil">Educação infantil</option>
+          <option value="ideb2025">Consultar IDEB 2025</option>
+          <option value="ideb">IDEB e aprendizagem</option>
+          <option value="alfabetizacao">Alfabetização</option>
+          <option value="censo">Censo Escolar</option>
+          <option value="desigualdades">Desigualdades</option>
+          <option value="financas">Financiamento</option>
+          <option value="vaar">VAAR 2026 · consulta nacional</option>
+          <option value="evolucao">Evolução histórica</option>
+        </select>
+      </label>
+      <span class="explore-or" aria-hidden="true">ou</span>
+      <label class="explore-field">
+        <span>Município</span>
+        <select id="homeMunicipioSelect">
+          <option value="">Selecione um município</option>
+        </select>
+      </label>
+      <button type="button" class="explore-button" id="homeExploreButton">Explorar dados <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+
+
+  <article class="ideb25-home-feature" data-panel-target="ideb2025" aria-label="Abrir consulta nacional do Ideb 2025">
+    <div>
+      <div class="ideb25-home-kicker">Novo painel · resultados oficiais</div>
+      <h3>Veja o Ideb 2025 da sua escola, município ou estado</h3>
+      <p>Consulta nacional por unidade da Federação, município e escola, com resultados por rede, etapa, evolução histórica e rankings. A RIDE e o Vale do São Francisco permanecem como recortes de acesso rápido.</p>
+    </div>
+    <div class="ideb25-home-cta">Consultar agora <span aria-hidden="true">→</span></div>
+  </article>
+
+  <article class="vaar-home-feature" data-panel-target="vaar" aria-label="Abrir consulta nacional do VAAR 2026">
+    <div>
+      <div class="vaar-home-kicker">Fundeb · VAAR 2026 · base nacional</div>
+      <h3>Consulte condicionalidades, indicadores e valor previsto do VAAR do seu município</h3>
+      <p>Pesquisa por qualquer município do país, com situação nas cinco condicionalidades, evolução em atendimento e aprendizagem, coeficiente de distribuição e complementação-VAAR prevista na publicação mais recente do FNDE.</p>
+    </div>
+    <div class="vaar-home-cta">Consultar VAAR 2026 <span aria-hidden="true">→</span></div>
+  </article>
+
+  <div class="editorial-intro">
+    <div class="card editorial-copy">
+      <div class="editorial-kicker">Identidade institucional</div>
+      <div class="card-title">O RIDE EDU como plataforma pública de leitura educacional do território</div>
+      <p>O RIDE EDU é uma plataforma de dados, monitoramento e interpretação das políticas educacionais na Região Administrativa Integrada de Desenvolvimento do Polo Petrolina e Juazeiro. Seu objetivo é organizar informações educacionais, orçamentárias e sociais em uma leitura regional, comparável e acessível, permitindo compreender como desigualdades territoriais se expressam na oferta da educação básica.</p>
+      <p>A plataforma se destina a pesquisadores, gestores públicos, conselhos de educação, equipes técnicas municipais, professores, estudantes, jornalistas e cidadãos interessados no acompanhamento das políticas públicas educacionais. Ao reunir indicadores de acesso, financiamento, desempenho, população e desigualdades, o site busca qualificar o debate público sobre a RIDE e subsidiar decisões mais transparentes.</p>
+      <p>A plataforma é produto técnico-tecnológico do Doutorado Profissional em Educação da Universidade de Pernambuco (UPE), desenvolvida por Clériston Andrade sob orientação do Prof. Dr. Paulo César Marques de Andrade Santos. Seu eixo de organização articula financiamento educacional, gestão orçamentária municipal, indicadores de acesso, aprendizagem e desigualdades educacionais na RIDE do Polo Petrolina e Juazeiro.</p>
+    </div>
+    <aside class="card">
+      <div class="card-title">Para que a plataforma foi criada?</div>
+      <p class="card-lead">A proposta é transformar dados dispersos em leitura pública, crítica e territorialmente situada.</p>
+      <div class="editorial-aside-list">
+        <div class="editorial-aside-item"><span class="editorial-aside-icon">🧭</span><span><strong>Monitorar:</strong> acompanhar séries históricas, indicadores municipais e trajetórias regionais.</span></div>
+        <div class="editorial-aside-item"><span class="editorial-aside-icon">📚</span><span><strong>Interpretar:</strong> relacionar financiamento, acesso, aprendizagem e capacidade de gestão.</span></div>
+        <div class="editorial-aside-item"><span class="editorial-aside-icon">🏛️</span><span><strong>Subsidiar:</strong> apoiar planejamento, controle social, pesquisa acadêmica e cooperação federativa.</span></div>
+      </div>
+    </aside>
+  </div>
+
+
+
+  <div class="section-divider">Produto extra da tese</div>
+  <div class="card caderno-extra-card" id="caderno-subsidios-legislativos">
+    <div class="caderno-extra-copy">
+      <div class="editorial-kicker">Produto técnico-legislativo</div>
+      <div class="card-title">Caderno de Subsídios Legislativos para o aperfeiçoamento da educação básica</div>
+      <p>Como produto extra da tese, elaborado a partir das recomendações da banca de qualificação, este Caderno transforma os achados da pesquisa em subsídios diretamente utilizáveis no debate público, na atuação parlamentar e na agenda municipalista.</p>
+      <p>O documento apresenta diagnóstico, matriz de propostas e minutas legislativas voltadas ao aperfeiçoamento do financiamento da educação básica, da governança federativa e das capacidades municipais, com atenção especial às desigualdades educacionais da RIDE Petrolina-Juazeiro.</p>
+      <div class="caderno-badges" aria-label="Conteúdos do caderno">
+        <span class="caderno-badge">PEC</span>
+        <span class="caderno-badge">PLP</span>
+        <span class="caderno-badge">Projetos de lei</span>
+        <span class="caderno-badge">Audiência pública</span>
+        <span class="caderno-badge">Anexos técnicos</span>
+      </div>
+    </div>
+    <a class="caderno-cover-button" href="caderno-subsidios-legislativos.pdf" target="_blank" rel="noopener" aria-label="Acessar o Caderno de Subsídios Legislativos em PDF">
+      <img src="capa-caderno-subsidios-legislativos.png" alt="Capa do Caderno de Subsídios Legislativos" loading="lazy">
+      <span class="caderno-cover-cta">Clique na capa <span aria-hidden="true">↗</span></span>
+    </a>
+  </div>
+
+  <div class="section-divider">Composição da RIDE</div>
+  <div class="grid-2-eq" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-title">Municípios integrantes</div>
+      <p class="card-lead">A região articula municípios de Pernambuco e da Bahia em torno do eixo Petrolina–Juazeiro, com forte circulação de estudantes, trabalhadores, serviços públicos, comércio, saúde, cultura e redes de formação.</p>
+      <div class="intro-list">
+        <div class="intro-item"><strong>Pernambuco:</strong> Petrolina, Lagoa Grande, Orocó e Santa Maria da Boa Vista.</div>
+        <div class="intro-item"><strong>Bahia:</strong> Juazeiro, Casa Nova, Curaçá e Sobradinho.</div>
+        <div class="intro-item"><strong>Polo regional:</strong> Petrolina e Juazeiro concentram serviços, universidades, equipamentos públicos e fluxos econômicos que estruturam a dinâmica territorial.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Arranjo institucional e finalidade pública</div>
+      <p class="card-lead">A RIDE foi criada como instrumento de integração interestadual e de planejamento regional. Sua existência reconhece que os problemas públicos do Vale do São Francisco ultrapassam limites municipais e exigem coordenação federativa.</p>
+      <div class="intro-list">
+        <div class="intro-item"><strong>Integração:</strong> articulação entre municípios de dois estados em torno de desafios comuns.</div>
+        <div class="intro-item"><strong>Planejamento:</strong> possibilidade de orientar políticas educacionais, infraestrutura, mobilidade, desenvolvimento e serviços públicos em escala regional.</div>
+        <div class="intro-item"><strong>Cooperação:</strong> necessidade de pactuação entre União, estados e municípios para reduzir assimetrias de capacidade administrativa e fiscal.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card ride-interpretive-block">
+    <div class="editorial-kicker">Leitura territorial</div>
+    <div class="card-title">Uma região integrada que ainda convive com desigualdades municipais</div>
+    <p class="card-lead">A RIDE expressa uma contradição importante: há integração econômica, social e cotidiana entre os municípios, mas as capacidades de financiamento, gestão, expansão da rede escolar e atendimento educacional permanecem desiguais. Por isso, a comparação regional precisa considerar tanto o volume de recursos disponíveis quanto as condições concretas de implementação das políticas públicas.</p>
+    <div class="ride-columns">
+      <div class="ride-mini-card"><h4>🚌 Fluxos cotidianos</h4><p>Famílias, estudantes e trabalhadores circulam diariamente entre municípios, o que torna insuficiente uma leitura isolada de cada rede municipal.</p></div>
+      <div class="ride-mini-card"><h4>💰 Financiamento público</h4><p>Fundeb, VAAT, VAAR, MDE e receitas adicionais precisam ser interpretados em relação à demanda, à população e à capacidade de execução.</p></div>
+      <div class="ride-mini-card"><h4>🤝 Cooperação federativa</h4><p>A RIDE pode funcionar como escala de planejamento territorial para distribuição mais equânime de recursos, equipamentos e oportunidades educacionais.</p></div>
+    </div>
+  </div>
+
+  <div class="section-divider">Objetivos do portal</div>
+  <div class="obj-grid">
+    <div class="obj-card">
+      <div class="obj-num">01 —</div>
+      <h4>Organizar</h4>
+      <p>Reunir em um único ambiente os dados educacionais, demográficos e financeiros da RIDE.</p>
+    </div>
+    <div class="obj-card">
+      <div class="obj-num">02 —</div>
+      <h4>Comparar</h4>
+      <p>Permitir leitura entre municípios, identificação de contrastes e padrões regionais.</p>
+    </div>
+    <div class="obj-card">
+      <div class="obj-num">03 —</div>
+      <h4>Analisar</h4>
+      <p>Apoiar estudos, planejamento e acompanhamento de políticas públicas educacionais.</p>
+    </div>
+    <div class="obj-card">
+      <div class="obj-num">04 —</div>
+      <h4>Difundir</h4>
+      <p>Facilitar o acesso público a informações organizadas e visualmente acessíveis.</p>
+    </div>
+  </div>
+
+  <div class="section-divider">Boletim editorial e leituras em destaque</div>
+  <div class="card home-news-preview">
+    <div class="card-title">Atualizações, análises e agendas educacionais da RIDE</div>
+    <p class="card-lead">A página inicial passa a destacar leituras interpretativas sobre educação infantil, Fundeb, VAAT, VAAR, IDEB, Saeb, financiamento da educação e desigualdades regionais. Os cards abaixo funcionam como chamadas editoriais para aprofundamento nas abas temáticas.</p>
+    <div class="home-news-grid">
+      <article class="home-news-card" data-panel-target="infantil"><div class="home-news-tag">Educação infantil</div><h4>Creche, pré-escola e desigualdades de acesso</h4><p>Leitura dos percentuais de atendimento com cautela metodológica, distinguindo volume absoluto de investimento e taxa líquida de matrícula.</p><span class="home-news-link">Ler análise →</span></article>
+      <article class="home-news-card" data-panel-target="financas"><div class="home-news-tag">Fundeb · VAAT · VAAR</div><h4>Financiamento como chave de interpretação territorial</h4><p>Como receitas redistributivas e capacidade de execução municipal ajudam a explicar avanços, limites e assimetrias.</p><span class="home-news-link">Ver dados →</span></article>
+      <article class="home-news-card" data-panel-target="ideb"><div class="home-news-tag">IDEB · Saeb</div><h4>Aprendizagem e fluxo escolar precisam ser lidos juntos</h4><p>O resultado final do IDEB depende da combinação entre proficiências e aprovação, não apenas de um indicador isolado.</p><span class="home-news-link">Analisar IDEB →</span></article>
+      <article class="home-news-card" data-panel-target="desigualdades"><div class="home-news-tag">Desigualdades regionais</div><h4>Indicadores sociais ajudam a contextualizar resultados</h4><p>Dados educacionais ganham densidade quando articulados a vulnerabilidade, população, território e capacidade estatal.</p><span class="home-news-link">Abrir eixo →</span></article>
+      <article class="home-news-card" data-panel-target="evolucao"><div class="home-news-tag">Série histórica</div><h4>Evolução 2020–2025 revela mudanças de trajetória</h4><p>O acompanhamento temporal permite diferenciar oscilações pontuais de tendências mais consistentes de financiamento e acesso.</p><span class="home-news-link">Comparar anos →</span></article>
+      <article class="home-news-card" data-panel-target="noticias"><div class="home-news-tag">Margens · 7 a 11 nov.</div><h4>Dados educacionais, avaliação e notícias da RIDE</h4><p>Nova edição: diretrizes para inteligência artificial, Enem, matrículas de 2027 e notícias dos municípios da RIDE, da Bahia e de Pernambuco.</p><span class="home-news-link">Abrir newsletter →</span></article>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- ══════════════════ VISÃO GERAL ══════════════════ -->
+<section class="panel" id="panel-visao">
+  <div class="section-divider">Indicadores centrais da RIDE</div>
+  <div class="kpi-row" id="overviewKpis"></div>
+
+  <div class="grid-2" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Receita do Fundeb — RIDE consolidada</div>
+      <p class="card-lead">Evolução agregada dos oito municípios entre 2020 e 2025.</p>
+      <div class="chart-wrap h320"><canvas id="chartFundebRide"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Perfil sintético da região</div>
+      <p class="card-lead">Leitura rápida dos extremos e concentrações regionais em 2024–2025.</p>
+      <div class="stat-grid" id="overviewMini"></div>
+    </div>
+  </div>
+
+  <div class="grid-2-eq">
+    <div class="card">
+      <div class="card-title">Cobertura em creche — 2025</div>
+      <p class="card-lead">Taxa líquida de matrículas por município.</p>
+      <div class="chart-wrap h240"><canvas id="chartCreche2025"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Cobertura em pré-escola — 2025</div>
+      <p class="card-lead">Taxa líquida de matrículas por município.</p>
+      <div class="chart-wrap h240"><canvas id="chartPre2025"></canvas></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ COMPARATIVO ══════════════════ -->
+<section class="panel" id="panel-comparativo">
+  <div class="section-divider">Comparativo entre municípios</div>
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Selecione dois municípios para comparar</div>
+    <p class="card-lead">O quadro reúne financiamento, cobertura e desempenho para facilitar leitura direta.</p>
+    <div class="compare-controls">
+      <select id="compareMunicipioA"></select>
+      <select id="compareMunicipioB"></select>
+    </div>
+    <div class="kpi-row" id="compareCards"></div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Fundeb 2025</div>
+      <p class="card-lead">Receita realizada no 6º bimestre.</p>
+      <div class="chart-wrap h240"><canvas id="chartCompareFundeb"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Cobertura da educação infantil</div>
+      <p class="card-lead">Creche e pré-escola em 2025.</p>
+      <div class="chart-wrap h240"><canvas id="chartCompareInfantil"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Tabela comparativa</div>
+    <p class="card-lead">Síntese dos principais indicadores do painel.</p>
+    <div class="table-wrap" id="compareTableWrap"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ EDUCAÇÃO INFANTIL ══════════════════ -->
+<section class="panel" id="panel-infantil">
+  <div class="section-divider">Cobertura da educação infantil</div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Evolução da taxa líquida em creches</div>
+      <p class="card-lead legend-boost">Série 2014–2025 — RIDE versus Brasil. A legenda e as linhas permitem distinguir a trajetória regional do parâmetro nacional.</p>
+      <div class="chart-wrap h320"><canvas id="chartCrecheSeries"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Evolução da taxa líquida em pré-escolas</div>
+      <p class="card-lead legend-boost">Série 2014–2025 — RIDE versus Brasil. A pré-escola deve ser interpretada em conjunto com obrigatoriedade legal, matrícula e capacidade física da rede.</p>
+      <div class="chart-wrap h320"><canvas id="chartPreSeries"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Investimentos em educação infantil — 2020 a 2025</div>
+      <p class="card-lead">Evolução da composição das despesas em creche e pré-escola — RIDE consolidada. Fundeb, MDE e outras fontes (R$ milhões).</p>
+      <div class="chart-wrap h360"><canvas id="chartInvestEdInf"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Leitura crítica</div>
+      <p class="card-lead">O investimento em educação infantil não deve ser lido isoladamente. Municípios maiores podem gastar mais em valores absolutos e, ainda assim, apresentar cobertura proporcional inferior, porque a demanda potencial é muito mais elevada. Municípios menores podem registrar saltos percentuais expressivos com expansão menor em números absolutos, sobretudo quando partem de bases reduzidas.</p>
+      <div class="stat-grid" id="infantilMini"></div>
+    </div>
+  </div>
+
+  <div class="method-note warning">
+    <h4>Como interpretar os avanços municipais</h4>
+    <p>Os dados sugerem que avanços de municípios pernambucanos como Santa Maria da Boa Vista, Lagoa Grande e Orocó podem estar associados a ampliação de matrículas, expansão de unidades, reordenamento da rede, convênios ou mudanças na base populacional utilizada para o cálculo. Em municípios baianos como Juazeiro, Casa Nova, Curaçá e Sobradinho, crescimentos mais tímidos ou oscilações devem ser lidos com prudência, pois podem decorrer de demanda reprimida mais elevada, maior pressão demográfica, limitações de rede física ou alterações na matrícula.</p>
+    <p>Não se deve inferir causalidade direta apenas a partir da taxa. Uma elevação percentual pode decorrer tanto de expansão real da oferta quanto de alterações demográficas. Da mesma forma, uma queda pode resultar de redução de matrículas, atualização da população de referência, reorganização de turmas ou mudanças no registro administrativo.</p>
+    <ul>
+      <li>Petrolina e Juazeiro exigem atenção especial por concentrarem maior população, maior demanda e redes mais complexas.</li>
+      <li>Municípios com maior capacidade fiscal nem sempre alcançam maior cobertura, pois também podem enfrentar demanda proporcionalmente mais intensa.</li>
+      <li>A comparação Bahia–Pernambuco precisa considerar diferenças de gestão, obras, expansão de vagas, apoio estadual, convênios e capacidade administrativa.</li>
+    </ul>
+  </div>
+
+  <div class="method-note green">
+    <h4>Nota de leitura: taxa líquida, demanda e investimento</h4>
+    <p>Os percentuais de creche e pré-escola dependem do tamanho da população de 0 a 5 anos, da demanda reprimida, do número de matrículas, da capacidade física da rede, da existência de unidades escolares, do ritmo de expansão, da priorização orçamentária, da capacidade administrativa e de variações demográficas.</p>
+    <p>Por isso, volume absoluto de investimento e taxa líquida de atendimento seguem lógicas distintas. O mesmo montante pode produzir efeitos diferentes em redes municipais de tamanhos muito distintos.</p>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="card-title">Taxas de matrícula por município — 2025</div>
+    <p class="card-lead">Taxa líquida de matrículas em creche (0–3 anos) e pré-escola (4–5 anos) por município. Fonte: Observatório da Criança e do Adolescente, 2025.</p>
+    <div class="table-wrap" id="infantilTaxasTableWrap"></div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════ IDEB 2025 — CONSULTA NACIONAL ══════════════════ -->
+<section class="panel" id="panel-ideb2025">
+  <div class="ideb25-hero">
+    <div>
+      <div class="ideb25-eyebrow">Resultados oficiais · edição 2025</div>
+      <h2>Veja o Ideb 2025 da sua escola, município ou estado</h2>
+      <p>Consulte resultados de todo o Brasil por unidade da Federação, município e escola. O painel reúne evolução histórica, componentes do indicador, posições comparáveis e rankings, mantendo a RIDE e o Vale do São Francisco como acessos rápidos.</p>
+      <div class="ideb25-hero-tags">
+        <span>27 unidades da Federação</span><span><strong id="ideb25HeroMunicipios">—</strong> unidades municipais</span><span><strong id="ideb25HeroEscolas">—</strong> registros escolares</span><span>Fonte oficial: MEC/Inep</span>
+      </div>
+    </div>
+    <div class="ideb25-seal" aria-hidden="true"><span>Ideb</span><strong>2025</strong><small>consulta nacional</small></div>
+  </div>
+
+  <div class="ideb25-search-shell">
+    <div class="ideb25-modebar">
+      <div class="ideb25-modebar-copy"><strong>Escolha o tipo de consulta</strong><span id="ideb25ModeCopy">Compare redes, etapas e posições de um município.</span></div>
+      <div class="ideb25-toggle" role="group" aria-label="Tipo de consulta">
+        <button type="button" data-ideb25-mode="estado">Estado</button>
+        <button type="button" class="active" data-ideb25-mode="municipio">Município</button>
+        <button type="button" data-ideb25-mode="escola">Escola</button>
+      </div>
+    </div>
+    <div class="ideb25-quick" aria-label="Acessos rápidos">
+      <span>Acessos rápidos</span>
+      <button type="button" data-ideb25-preset="brasil">Brasil</button>
+      <button type="button" data-ideb25-preset="nordeste">Nordeste</button>
+      <button type="button" data-ideb25-preset="brasil" data-ideb25-uf="BA">Bahia</button>
+      <button type="button" data-ideb25-preset="brasil" data-ideb25-uf="PE">Pernambuco</button>
+      <button type="button" data-ideb25-preset="ride">RIDE</button>
+      <button type="button" data-ideb25-preset="vale">Vale do São Francisco</button>
+    </div>
+    <div class="ideb25-form">
+      <div class="ideb25-fields">
+        <label class="ideb25-field"><span>Recorte</span><select id="ideb25Scope">
+          <option value="brasil">Brasil inteiro</option>
+          <option value="norte">Região Norte</option><option value="nordeste">Região Nordeste</option><option value="centro">Região Centro-Oeste</option><option value="sudeste">Região Sudeste</option><option value="sul">Região Sul</option>
+          <option value="ride">RIDE Petrolina–Juazeiro</option><option value="vale">Vale do São Francisco</option><option value="valeBA">Vale — Bahia</option><option value="valePE">Vale — Pernambuco</option>
+        </select></label>
+        <label class="ideb25-field"><span>Unidade da Federação</span><select id="ideb25UF"></select></label>
+        <label class="ideb25-field"><span>Etapa</span><select id="ideb25Stage"></select></label>
+        <label class="ideb25-field" id="ideb25MunicipalityField"><span>Município</span><select id="ideb25Municipality"></select></label>
+        <label class="ideb25-field"><span>Rede</span><select id="ideb25Network"></select></label>
+        <div class="ideb25-school-fields" id="ideb25SchoolFields">
+          <label class="ideb25-field"><span>Filtrar por nome ou código</span><input type="search" id="ideb25SchoolFilter" placeholder="Digite parte do nome ou o código Inep" autocomplete="off"></label>
+          <label class="ideb25-field"><span>Escola</span><select id="ideb25School"></select></label>
+        </div>
+      </div>
+      <div class="ideb25-actions">
+        <button type="button" class="ideb25-submit" id="ideb25Submit">Ver resultado</button>
+        <span class="ideb25-help">Resultados ausentes são apresentados como “sem resultado”, nunca como nota zero.</span>
+        <span class="ideb25-load-status" id="ideb25Status" aria-live="polite"></span>
+        <span class="ideb25-count" id="ideb25Count"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ideb25-placeholder" id="ideb25Placeholder">
+    <div><div class="ideb25-placeholder-icon">↗</div><strong>Selecione os filtros para começar</strong><p>O painel abrirá o resultado de 2025, a evolução histórica e as posições comparáveis.</p></div>
+  </div>
+
+  <div class="ideb25-result" id="ideb25Result" hidden>
+    <div class="ideb25-result-head" id="ideb25ResultHead"></div>
+    <div class="ideb25-score-grid">
+      <div class="ideb25-score-main" id="ideb25Score"></div>
+      <div class="ideb25-kpis" id="ideb25Kpis"></div>
+    </div>
+    <div class="ideb25-analysis-grid">
+      <div class="ideb25-card">
+        <div class="ideb25-card-head"><div><h4>Evolução do Ideb</h4><div class="ideb25-card-sub">Série histórica observada nas edições disponíveis.</div></div></div>
+        <div class="ideb25-chart"><canvas id="ideb25Chart"></canvas></div>
+        <div class="ideb25-narrative" id="ideb25Narrative"></div>
+      </div>
+      <div class="ideb25-card" id="ideb25Rank"></div>
+    </div>
+    <div class="ideb25-card">
+      <div class="ideb25-card-head"><div><h4 id="ideb25TableTitle">Ranking</h4><div class="ideb25-card-sub" id="ideb25TableSub"></div></div></div>
+      <div class="ideb25-table-wrap"><table class="ideb25-table"><thead><tr><th>Posição</th><th>Unidade</th><th>Rede</th><th>Ideb 2025</th><th>Variação 2023–2025</th></tr></thead><tbody id="ideb25TableBody"></tbody></table></div>
+    </div>
+    <div class="ideb25-method"><strong>Nota metodológica:</strong> os resultados municipais e escolares são extraídos das planilhas oficiais de divulgação do Ideb 2025 do MEC/Inep anexadas ao projeto. A consulta municipal inclui anos iniciais, anos finais e ensino médio. A consulta escolar abrange anos iniciais, anos finais e ensino médio, conforme as bases escolares oficiais incorporadas ao projeto. No modo “Estado”, o painel apresenta uma média simples dos resultados municipais válidos do recorte selecionado; essa medida é um panorama comparativo e não substitui o Ideb oficial da unidade da Federação. A ausência de valor pode decorrer dos critérios de divulgação e não representa nota zero.</div>
+  </div>
+</section>
+
+<!-- ══════════════════ IDEB ══════════════════ -->
+<section class="panel" id="panel-ideb">
+  <div class="section-divider">Desempenho escolar — IDEB 2023</div>
+  <div class="toolbar">
+    <select id="idebStageSelect">
+      <option value="iniciais">Anos iniciais</option>
+      <option value="finais">Anos finais</option>
+    </select>
+  </div>
+  <div class="kpi-row" id="idebCards"></div>
+
+  <div class="method-note">
+    <h4>Como ler o IDEB: aprendizagem, fluxo e dados ausentes</h4>
+    <p>O IDEB resulta da combinação entre desempenho em Língua Portuguesa e Matemática, medido por proficiências padronizadas, e fluxo escolar, calculado a partir das taxas de aprovação. Assim, uma rede pode ter boa proficiência e resultado final limitado se houver retenção elevada; também pode ter alto fluxo sem alcançar resultado satisfatório quando a aprendizagem é baixa.</p>
+    <p>Quando Petrolina aparece cumprindo a meta, a leitura inicial sugere combinação mais favorável entre aprendizagem e aprovação. Nos municípios abaixo da meta, é necessário verificar se o obstáculo principal está na proficiência, no fluxo ou na combinação dos dois componentes. A ausência de dados, indicada por traços ou campos vazios, não significa necessariamente mau desempenho: pode decorrer de dado não divulgado na base oficial, resultado não calculado para a etapa, insuficiência de participação, ausência de proficiência, ausência de fluxo ou indisponibilidade para o ano selecionado.</p>
+  </div>
+
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">IDEB observado vs. meta projetada</div>
+      <p class="card-lead">Comparação por município — 2023.</p>
+      <div class="chart-wrap h280"><canvas id="chartIdebCompare"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Aprendizado e fluxo</div>
+      <p class="card-lead">Relação entre proficiência padronizada e taxa de aprovação.</p>
+      <div class="chart-wrap h280"><canvas id="chartIdebFlow"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Tabela sintética do IDEB</div>
+    <p class="card-lead">Indicadores de IDEB, metas, aprendizado, fluxo e proficiências disponíveis.</p>
+    <div class="method-note warning" style="margin-top:0"><h4>Nota metodológica sobre campos vazios</h4><p>Traços, células vazias ou valores indisponíveis indicam ausência de informação pública na base utilizada, insuficiência de participação, não cálculo para a etapa, ausência de proficiência ou de fluxo escolar, e não devem ser interpretados automaticamente como resultado negativo.</p></div>
+    <div class="table-wrap" id="idebTableWrap"></div>
+  </div>
+
+  <div class="card calc-share-card" style="margin-top:18px">
+    <div class="calc-share-flex">
+      <div>
+        <div class="card-title">Quer simular um IDEB?</div>
+        <p class="card-lead" style="margin-bottom:0">As calculadoras interativas (Anos Iniciais, Anos Finais e Ensino Médio) estão em uma aba própria, com link compartilhável.</p>
+      </div>
+      <button type="button" class="btn-copy-link" data-goto-panel="calculadoras">
+        <span class="btn-copy-icon">🧮</span>
+        <span class="btn-copy-label">Abrir calculadoras</span>
+      </button>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════ CALCULADORAS IDEB ══════════════════ -->
+<section class="panel" id="panel-calculadoras">
+  <div class="section-divider">Calculadoras do IDEB — simule cenários</div>
+
+  <div class="card calc-share-card">
+    <div class="calc-share-flex">
+      <div>
+        <div class="card-title">Compartilhe esta página</div>
+        <p class="card-lead" style="margin-bottom:0">Esta aba possui um link específico que abre direto nas calculadoras do IDEB. A ferramenta permite testar como aprendizagem e fluxo, juntos, alteram o resultado final.</p>
+      </div>
+      <button type="button" class="btn-copy-link" id="btnCopyCalcLink">
+        <span class="btn-copy-icon">🔗</span>
+        <span class="btn-copy-label">Copiar link</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Calculadora interativa</div>
+    <p class="card-lead">Insira proficiências do Saeb (ou Sabe/BA) e indicadores de fluxo para calcular o IDEB de uma rede, escola ou simulação. A aprendizagem representa o desempenho médio dos estudantes; o fluxo expressa a aprovação ao longo da etapa. Pequenas variações em proficiência ou aprovação podem alterar o resultado final, porque o IDEB multiplica desempenho e fluxo. A ferramenta pode ser usada por gestores, pesquisadores, professores e estudantes para construir cenários pedagógicos de forma simples.</p>
+
+    <div class="calc-tabs" role="tablist">
+      <button class="calc-tab active" data-calc="ai">Anos Iniciais · 1º ao 5º ano</button>
+      <button class="calc-tab" data-calc="af">Anos Finais · 6º ao 9º ano</button>
+      <button class="calc-tab" data-calc="em">Ensino Médio · 1ª a 3ª série</button>
+    </div>
+
+    <!-- ANOS INICIAIS -->
+    <div class="calc-pane active" id="calc-pane-ai">
+      <div class="calc-section-label">📋 Dados de entrada</div>
+      <div class="calc-grid">
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Língua Portuguesa</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="ai-lp" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 5º ano (ex: 204,3)</span>
+        </label>
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Matemática</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="ai-mt" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 5º ano (ex: 209,1)</span>
+        </label>
+      </div>
+      <label class="calc-field" style="margin-bottom:14px;display:block">
+        <span class="calc-field-label">Indicador de fluxo (P)</span>
+        <div class="calc-field-input-wrap">
+          <input type="text" inputmode="decimal" class="calc-field-input" data-input="ai-p" placeholder="—">
+          <span class="calc-field-suffix">0–1</span>
+        </div>
+        <span class="calc-field-hint">Valor entre 0 e 1 (ex: 0,9850). Obtido das taxas de aprovação do Censo Escolar.</span>
+      </label>
+      <div class="calc-params">
+        <div><strong>LP:</strong> limites Saeb 1997 = 49–324 (amplitude 275)</div>
+        <div><strong>MT:</strong> limites Saeb 1997 = 60–322 (amplitude 262)</div>
+      </div>
+
+      <div class="calc-intermediate">
+        <div class="calc-intermediate-title">🔢 Cálculo intermediário</div>
+        <div class="calc-step-grid">
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">①</span>Numerador</div>
+            <div class="calc-step-formula">Profic. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="ai-num-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="ai-num-mt">—</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">②</span>Denominador</div>
+            <div class="calc-step-formula">Lim. sup. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span>275</span></div>
+            <div class="calc-step-row"><span>MT</span><span>262</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">③</span>Indicador (0–10)</div>
+            <div class="calc-step-formula">(① / ②) × 10</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="ai-ind-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="ai-ind-mt">—</span></div>
+          </div>
+        </div>
+        <div class="calc-summary">
+          <div class="calc-summary-item">
+            <div class="lbl">④ Desempenho (N)</div>
+            <div class="val" data-out="ai-n">—</div>
+          </div>
+          <div class="calc-summary-item">
+            <div class="lbl">Fluxo (P)</div>
+            <div class="val" data-out="ai-p-display">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="calc-result-label">Resultado final</div>
+        <div class="calc-result-formula">IDEB = N × P</div>
+        <div class="calc-result-value" data-out="ai-ideb">—</div>
+        <div class="calc-result-detail" data-out="ai-ideb-detail">Preencha os três campos acima para ver o resultado.</div>
+      </div>
+
+      <div class="calc-detail-grid">
+        <div class="calc-detail-item"><div class="lbl">Indicador LP</div><div class="val" data-out="ai-d-lp">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Indicador MT</div><div class="val" data-out="ai-d-mt">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Desempenho N</div><div class="val" data-out="ai-d-n">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Fluxo P</div><div class="val" data-out="ai-d-p">—</div></div>
+        <div class="calc-detail-item highlight"><div class="lbl">IDEB</div><div class="val" data-out="ai-d-ideb">—</div></div>
+      </div>
+
+      <details class="calc-method">
+        <summary>Metodologia · clique para expandir</summary>
+        <div class="calc-method-body">
+          <p><strong>Etapa 1 — Proficiência Saeb.</strong> Média dos estudantes do 5º ano em LP e Matemática, obtida do Saeb ou de avaliação estadual equivalente (ex: Sabe/BA).</p>
+          <p><strong>Etapa 2 — Normalização (0–10).</strong> Ind.LP = [(Profic.LP − 49) / 275] × 10  |  Ind.MT = [(Profic.MT − 60) / 262] × 10. Como as amplitudes diferem, proficiências iguais nas duas disciplinas geram indicadores diferentes.</p>
+          <p><strong>Etapa 3 — Desempenho (N).</strong> N = (Ind.LP + Ind.MT) / 2.</p>
+          <p><strong>Etapa 4 — Fluxo (P).</strong> Inserido diretamente como valor entre 0 e 1, derivado das taxas de aprovação do Censo Escolar.</p>
+          <p><strong>Etapa 5 — IDEB.</strong> IDEB = N × P. Máximo teórico: 10. O produto impede que desempenho alto compense fluxo baixo.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ANOS FINAIS -->
+    <div class="calc-pane" id="calc-pane-af">
+      <div class="calc-section-label">📋 Dados de entrada</div>
+      <div class="calc-grid">
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Língua Portuguesa</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="af-lp" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 9º ano (ex: 245,09)</span>
+        </label>
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Matemática</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="af-mt" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 9º ano (ex: 249,35)</span>
+        </label>
+      </div>
+      <label class="calc-field" style="margin-bottom:14px;display:block">
+        <span class="calc-field-label">Indicador de fluxo (P)</span>
+        <div class="calc-field-input-wrap">
+          <input type="text" inputmode="decimal" class="calc-field-input" data-input="af-p" placeholder="—">
+          <span class="calc-field-suffix">0–1</span>
+        </div>
+        <span class="calc-field-hint">Taxa de aprovação média da etapa, valor entre 0 e 1 (ex: 0,9620).</span>
+      </label>
+      <div class="calc-params">
+        <div><strong>LP:</strong> limites Saeb 1997 = 100–400 (amplitude 300)</div>
+        <div><strong>MT:</strong> limites Saeb 1997 = 100–400 (amplitude 300)</div>
+      </div>
+
+      <div class="calc-intermediate">
+        <div class="calc-intermediate-title">🔢 Cálculo intermediário</div>
+        <div class="calc-step-grid">
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">①</span>Numerador</div>
+            <div class="calc-step-formula">Profic. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="af-num-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="af-num-mt">—</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">②</span>Denominador</div>
+            <div class="calc-step-formula">Lim. sup. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span>300</span></div>
+            <div class="calc-step-row"><span>MT</span><span>300</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">③</span>Indicador (0–10)</div>
+            <div class="calc-step-formula">(① / ②) × 10</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="af-ind-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="af-ind-mt">—</span></div>
+          </div>
+        </div>
+        <div class="calc-summary">
+          <div class="calc-summary-item">
+            <div class="lbl">④ Desempenho (N)</div>
+            <div class="val" data-out="af-n">—</div>
+          </div>
+          <div class="calc-summary-item">
+            <div class="lbl">Fluxo (P)</div>
+            <div class="val" data-out="af-p-display">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="calc-result-label">Resultado final</div>
+        <div class="calc-result-formula">IDEB = N × P</div>
+        <div class="calc-result-value" data-out="af-ideb">—</div>
+        <div class="calc-result-detail" data-out="af-ideb-detail">Preencha os três campos acima para ver o resultado.</div>
+      </div>
+
+      <div class="calc-detail-grid">
+        <div class="calc-detail-item"><div class="lbl">Indicador LP</div><div class="val" data-out="af-d-lp">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Indicador MT</div><div class="val" data-out="af-d-mt">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Desempenho N</div><div class="val" data-out="af-d-n">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Fluxo P</div><div class="val" data-out="af-d-p">—</div></div>
+        <div class="calc-detail-item highlight"><div class="lbl">IDEB</div><div class="val" data-out="af-d-ideb">—</div></div>
+      </div>
+
+      <details class="calc-method">
+        <summary>Metodologia · clique para expandir</summary>
+        <div class="calc-method-body">
+          <p><strong>Etapa 1 — Proficiência Saeb.</strong> Média dos estudantes do 9º ano em LP e Matemática, obtida do Saeb ou de avaliação estadual equivalente.</p>
+          <p><strong>Etapa 2 — Normalização (0–10).</strong> Indicador = [(Profic. − 100) / 300] × 10. Nos Anos Finais, LP e MT compartilham os mesmos limites Saeb 1997.</p>
+          <p><strong>Etapa 3 — Desempenho (N).</strong> N = (Ind.LP + Ind.MT) / 2.</p>
+          <p><strong>Etapa 4 — Fluxo (P).</strong> Taxa de aprovação média da etapa, calculada a partir do Censo Escolar. Varia entre 0 e 1.</p>
+          <p><strong>Etapa 5 — IDEB.</strong> IDEB = N × P. Máximo teórico: 10.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ENSINO MÉDIO -->
+    <div class="calc-pane" id="calc-pane-em">
+      <div class="calc-section-label">📋 Desempenho — proficiência média</div>
+      <div class="calc-grid">
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Língua Portuguesa</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="em-lp" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 3ª série EM (ex: 289,7)</span>
+        </label>
+        <label class="calc-field">
+          <span class="calc-field-label">Proficiência média — Matemática</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="em-mt" placeholder="—">
+            <span class="calc-field-suffix">pontos</span>
+          </div>
+          <span class="calc-field-hint">Escala Saeb · 3ª série EM (ex: 283,5)</span>
+        </label>
+      </div>
+
+      <div class="calc-section-label">📋 Fluxo escolar — taxas de aprovação por série</div>
+      <p class="card-lead" style="margin-bottom:10px;font-size:12px">Insira as taxas em porcentagem (ex: 87,5). O fluxo P é calculado pela média harmônica das três séries, dividida por 100.</p>
+      <div class="calc-grid-3">
+        <label class="calc-field">
+          <span class="calc-field-label">1ª série do EM</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="em-t1" placeholder="—">
+            <span class="calc-field-suffix">%</span>
+          </div>
+          <span class="calc-field-hint">Taxa de aprovação</span>
+        </label>
+        <label class="calc-field">
+          <span class="calc-field-label">2ª série do EM</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="em-t2" placeholder="—">
+            <span class="calc-field-suffix">%</span>
+          </div>
+          <span class="calc-field-hint">Taxa de aprovação</span>
+        </label>
+        <label class="calc-field">
+          <span class="calc-field-label">3ª série do EM</span>
+          <div class="calc-field-input-wrap">
+            <input type="text" inputmode="decimal" class="calc-field-input" data-input="em-t3" placeholder="—">
+            <span class="calc-field-suffix">%</span>
+          </div>
+          <span class="calc-field-hint">Taxa de aprovação</span>
+        </label>
+      </div>
+      <div class="calc-harmonic-info" data-out="em-harmonic-info" style="display:none"></div>
+
+      <div class="calc-params" style="margin-top:14px">
+        <div><strong>LP:</strong> limites Saeb 1997 = 117–451 (amplitude 334)</div>
+        <div><strong>MT:</strong> limites Saeb 1997 = 111–467 (amplitude 356)</div>
+      </div>
+
+      <div class="calc-intermediate">
+        <div class="calc-intermediate-title">🔢 Cálculo intermediário</div>
+        <div class="calc-step-grid">
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">①</span>Numerador</div>
+            <div class="calc-step-formula">Profic. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="em-num-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="em-num-mt">—</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">②</span>Denominador</div>
+            <div class="calc-step-formula">Lim. sup. − Lim. inf.</div>
+            <div class="calc-step-row"><span>LP</span><span>334</span></div>
+            <div class="calc-step-row"><span>MT</span><span>356</span></div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-head"><span class="num">③</span>Indicador (0–10)</div>
+            <div class="calc-step-formula">(① / ②) × 10</div>
+            <div class="calc-step-row"><span>LP</span><span data-out="em-ind-lp">—</span></div>
+            <div class="calc-step-row"><span>MT</span><span data-out="em-ind-mt">—</span></div>
+          </div>
+        </div>
+        <div class="calc-summary">
+          <div class="calc-summary-item">
+            <div class="lbl">④ Desempenho (N)</div>
+            <div class="val" data-out="em-n">—</div>
+          </div>
+          <div class="calc-summary-item">
+            <div class="lbl">⑤ Fluxo (P) · harmônica/100</div>
+            <div class="val" data-out="em-p-display">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="calc-result-label">Resultado final</div>
+        <div class="calc-result-formula">IDEB = N × P</div>
+        <div class="calc-result-value" data-out="em-ideb">—</div>
+        <div class="calc-result-detail" data-out="em-ideb-detail">Preencha proficiências e as três taxas de aprovação para ver o resultado.</div>
+      </div>
+
+      <div class="calc-detail-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="calc-detail-item"><div class="lbl">Indicador LP</div><div class="val" data-out="em-d-lp">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Indicador MT</div><div class="val" data-out="em-d-mt">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Desempenho N</div><div class="val" data-out="em-d-n">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Fluxo P</div><div class="val" data-out="em-d-p">—</div></div>
+      </div>
+      <div class="calc-detail-grid" style="grid-template-columns:repeat(4,1fr);margin-top:10px">
+        <div class="calc-detail-item"><div class="lbl">Taxa 1ª série</div><div class="val" data-out="em-d-t1">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Taxa 2ª série</div><div class="val" data-out="em-d-t2">—</div></div>
+        <div class="calc-detail-item"><div class="lbl">Taxa 3ª série</div><div class="val" data-out="em-d-t3">—</div></div>
+        <div class="calc-detail-item highlight"><div class="lbl">IDEB</div><div class="val" data-out="em-d-ideb">—</div></div>
+      </div>
+
+      <details class="calc-method">
+        <summary>Metodologia · clique para expandir</summary>
+        <div class="calc-method-body">
+          <p><strong>Etapa 1 — Proficiência Saeb.</strong> Média dos estudantes da 3ª série do EM em LP e Matemática.</p>
+          <p><strong>Etapa 2 — Normalização (0–10).</strong> Ind.LP = [(Profic.LP − 117) / 334] × 10  |  Ind.MT = [(Profic.MT − 111) / 356] × 10. Os limites diferem entre LP e MT — e diferem dos demais segmentos.</p>
+          <p><strong>Etapa 3 — Desempenho (N).</strong> N = (Ind.LP + Ind.MT) / 2.</p>
+          <p><strong>Etapa 4 — Fluxo (P) por média harmônica.</strong> P = [3 / (1/taxa<sub>1ª</sub> + 1/taxa<sub>2ª</sub> + 1/taxa<sub>3ª</sub>)] / 100. A média harmônica penaliza séries com aprovação muito baixa mais fortemente que a média simples.</p>
+          <p><strong>Etapa 5 — IDEB.</strong> IDEB = N × P. Máximo teórico: 10.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ ALFABETIZAÇÃO ══════════════════ -->
+<section class="panel" id="panel-alfabetizacao">
+  <div class="section-divider">Indicador Criança Alfabetizada — 2025</div>
+
+  <div class="kpi-row" id="alfabKpis"></div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Percentual de alunos alfabetizados — 2025</div>
+      <p class="card-lead">Resultado observado vs. meta projetada para 2025 — rede municipal.</p>
+      <div class="chart-wrap h280"><canvas id="chartAlfabMeta"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Evolução 2023–2025</div>
+      <p class="card-lead">Trajetória do percentual de alfabetização por município.</p>
+      <div class="chart-wrap h280"><canvas id="chartAlfabEvolucao"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Tabela síntese — Alfabetização 2025</div>
+    <p class="card-lead">Rede municipal. Fonte: MEC/Inep — Indicador Criança Alfabetizada 2025.</p>
+    <div class="table-wrap" id="alfabTableWrap"></div>
+    <div class="alert" style="margin-top:14px">O nível de alfabetização varia de 0 (abaixo do básico) a 5 (avançado). A participação indica o percentual de alunos do 2º ano avaliados. Municípios abaixo da meta 2025 estão sinalizados em laranja.</div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ CENSO ══════════════════ -->
+<section class="panel" id="panel-censo">
+  <div class="section-divider">Estrutura da rede municipal — Censo Escolar 2025</div>
+  <div class="kpi-row" id="censoKpis"></div>
+
+  <div class="alert" style="margin-bottom:18px">
+    <strong>Nota metodológica:</strong> Os dados desta seção referem-se exclusivamente às <strong>redes municipais de ensino</strong> (rede pública municipal, escolas rurais e urbanas), conforme filtro aplicado no QEdu/Censo Escolar 2025. Escolas e matrículas das redes estadual e federal não estão incluídas nos totais apresentados.
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Matrículas por etapa — 2025</div>
+      <p class="card-lead">Somatório da RIDE por etapa educacional — rede municipal.</p>
+      <div class="chart-wrap h240"><canvas id="chartCensoTotals"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Escolas e docentes por município</div>
+      <p class="card-lead">Escolas e professores da rede municipal — anos iniciais e finais.</p>
+      <div class="chart-wrap h240"><canvas id="chartCensoSchools"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Tabela do Censo Escolar 2025 — rede municipal</div>
+    <p class="card-lead">Escolas rurais e urbanas da rede pública municipal, matrículas por etapa. Fonte: QEdu/Inep, 2025.</p>
+    <div class="table-wrap" id="censoTableWrap"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ DESIGUALDADES ══════════════════ -->
+<section class="panel" id="panel-desigualdades">
+  <div class="section-divider">Desigualdades educacionais</div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Onde a desigualdade pesa mais</div>
+    <p class="card-lead">Esta seção combina contexto social, perfil da rede e aprendizado adequado para mostrar onde a vulnerabilidade se converte em desigualdade educacional.</p>
+    <div class="desig-kpi-row" id="desigKpis"></div>
+  </div>
+
+  <div class="insight-grid" id="desigInsights"></div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Bolsa Família e ruralidade</div>
+      <p class="card-lead">Percentual da população coberta pelo Bolsa Família e peso da população rural.</p>
+      <div class="chart-wrap h280"><canvas id="chartDesigContexto"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Aprendizado adequado por nível socioeconômico</div>
+      <p class="card-lead">Percentuais de 2023 para estudantes de NSE baixo e alto.</p>
+      <div class="chart-wrap h280"><canvas id="chartDesigAprendiz"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Síntese comparativa</div>
+    <p class="card-lead">Foco em vulnerabilidade, desigualdade de desempenho e habilitação no VAAR.</p>
+    <div class="table-wrap" id="desigTableWrap"></div>
+    <div class="alert" style="margin-top:14px">Municípios com Bolsa Família e ruralidade altas tendem a concentrar maior pressão social sobre a rede. Quando isso se soma a baixa aprendizagem entre estudantes de NSE baixo e à não habilitação no VAAR, o quadro de equidade fica mais crítico.</div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ POPULAÇÃO ══════════════════ -->
+<section class="panel" id="panel-populacao">
+  <div class="section-divider">Dados populacionais — IBGE</div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Censo 2022 e estimativas oficiais 2025</div>
+    <p class="card-lead">O IBGE ainda não divulgou estimativas municipais de 2026. Utilizamos o Censo 2022 e a estimativa de 2025 como referência demográfica atual.</p>
+    <div class="pop-row" id="popKpis"></div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">População por município</div>
+      <p class="card-lead">Censo 2022 versus estimativa oficial de 2025.</p>
+      <div class="chart-wrap h280"><canvas id="chartPopComp"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Variação populacional recente</div>
+      <p class="card-lead">Crescimento percentual entre 2022 e 2025.</p>
+      <div class="chart-wrap h280"><canvas id="chartPopVar"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Estrutura demográfica da RIDE</div>
+    <p class="card-lead">A RIDE é fortemente concentrada em Petrolina e Juazeiro, enquanto os demais municípios compõem um entorno de menor porte demográfico.</p>
+    <div class="table-wrap" id="popTableWrap"></div>
+    <div class="alert">As estimativas municipais oficiais do IBGE são publicadas anualmente. Como a estimativa de 2026 não estava disponível no momento da atualização do portal, foi adotada a série mais recente publicada pelo instituto.</div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ FINANCIAMENTO ══════════════════ -->
+<section class="panel" id="panel-financas">
+  <div class="section-divider">Financiamento educacional — retrato de 2025</div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Recorte do ano corrente</div>
+    <p class="card-lead">Os gráficos abaixo mostram o estado mais recente das principais variáveis de financiamento, com base no 6º bimestre de 2025. Para a evolução de cada indicador entre 2020 e 2025, consulte a aba <strong>Evolução 2020–2025</strong>.</p>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Fundeb por município</div>
+      <p class="card-lead">Receita realizada no 6º bimestre de 2025.</p>
+      <div class="chart-wrap h280"><canvas id="chartFundeb2025"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">VAAT por município</div>
+      <p class="card-lead">Complementação VAAT acumulada até o 6º bimestre.</p>
+      <div class="chart-wrap h280"><canvas id="chartVaat2025"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">VAAR por município</div>
+      <p class="card-lead">Complementação VAAR realizada até o 6º bimestre.</p>
+      <div class="chart-wrap h240"><canvas id="chartVaar2025"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Aplicação em MDE</div>
+      <p class="card-lead">Percentual aplicado sobre a receita líquida de impostos.</p>
+      <div class="chart-wrap h240"><canvas id="chartMde2025"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Receitas adicionais</div>
+      <p class="card-lead">Total por município: salário-educação, PNAE, PNATE, FNDE e convênios.</p>
+      <div class="chart-wrap h240"><canvas id="chartAdicionais"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Remuneração com recursos do Fundeb</div>
+      <p class="card-lead">Percentual aplicado em 2025 — mínimo constitucional de 70%.</p>
+      <div class="chart-wrap h240"><canvas id="chartRemuneracao"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Tabela financeira resumida</div>
+    <p class="card-lead">Síntese das variáveis centrais de 2025.</p>
+    <div class="table-wrap" id="financeTableWrap"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ EVOLUÇÃO 2020-2025 ══════════════════ -->
+<section class="panel" id="panel-evolucao">
+  <div class="section-divider">Evolução do financiamento da educação básica — 2020 a 2025</div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Como ler esta seção</div>
+    <p class="card-lead">Os gráficos abaixo reúnem seis anos do RREO/Siope para os oito municípios da RIDE. Mostram, em série temporal, a receita do Fundeb realizada, a complementação VAAT, os investimentos em educação infantil decompostos por fonte, as receitas adicionais (salário-educação, FNDE, convênios) e o percentual aplicado em remuneração com recursos do Fundeb. O recorte 2020–2025 cobre o início do Novo Fundeb (2021), a integração das complementações VAAT e VAAR e o ano corrente (6º bimestre de 2025).</p>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Receita do Fundeb — RIDE consolidada</div>
+      <p class="card-lead">Soma da receita realizada nos oito municípios, em R$ milhões.</p>
+      <div class="chart-wrap h280"><canvas id="chartEvolFundebRide"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Complementação VAAT — RIDE consolidada</div>
+      <p class="card-lead">Receita do VAAT acumulada — disponível a partir de 2021 (Novo Fundeb).</p>
+      <div class="chart-wrap h280"><canvas id="chartEvolVaatRide"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Trajetórias do Fundeb por município — 2020 a 2025</div>
+    <p class="card-lead">Receita realizada por município. As linhas pontilhadas indicam municípios da Bahia; as contínuas, de Pernambuco.</p>
+    <div class="chart-wrap h360"><canvas id="chartEvolFundebMuni"></canvas></div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Investimentos em educação infantil — composição</div>
+      <p class="card-lead">RIDE consolidada — Fundeb, MDE e outras fontes em creche e pré-escola (R$ milhões).</p>
+      <div class="chart-wrap h320"><canvas id="chartEvolEdInfStack"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Investimentos em educação infantil — total por município</div>
+      <p class="card-lead">Soma de Fundeb + MDE + outras fontes, em R$ milhões.</p>
+      <div class="toolbar">
+        <select id="evolEdInfMuniSelect"></select>
+      </div>
+      <div class="chart-wrap h280"><canvas id="chartEvolEdInfMuni"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Receitas adicionais — RIDE consolidada</div>
+      <p class="card-lead">Salário-educação, PNAE, PNATE, demais transferências do FNDE e convênios. R$ milhões.</p>
+      <div class="chart-wrap h300"><canvas id="chartEvolAdicionais"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Aplicação em MDE — % da receita líquida</div>
+      <p class="card-lead">Mínimo constitucional de 25%. Valores abaixo aparecem em vermelho.</p>
+      <div class="chart-wrap h300"><canvas id="chartEvolMdePct"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Remuneração com recursos do Fundeb — 2021 a 2025</div>
+    <p class="card-lead">Percentual aplicado em remuneração dos profissionais. Linha tracejada: piso constitucional de 70%.</p>
+    <div class="chart-wrap h320"><canvas id="chartEvolRemuneracao"></canvas></div>
+  </div>
+
+  <div class="kpi-row" id="evolKpis" style="margin-bottom:18px"></div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Síntese da evolução — RIDE consolidada</div>
+    <p class="card-lead">Receita realizada do Fundeb, VAAT, investimento em educação infantil e receitas adicionais. R$ milhões.</p>
+    <div class="table-wrap" id="evolSinteseTableWrap"></div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">Investimento em educação infantil por município — 2020 a 2025</div>
+    <p class="card-lead">Total das despesas em creche e pré-escola por ano, em R$ milhões. Inclui Fundeb (creche + pré-escola), MDE e outras fontes.</p>
+    <div class="table-wrap" id="evolEdInfTableWrap"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Receitas adicionais por município — 2021 a 2025</div>
+    <p class="card-lead">Total das receitas adicionais por ano, em R$ milhões.</p>
+    <div class="table-wrap" id="evolAdicTableWrap"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ VAAR 2026 ══════════════════ -->
+<section class="panel" id="panel-vaar">
+  <div class="section-divider">VAAR 2026 · consulta nacional</div>
+  <div class="vaar-intro card">
+    <div>
+      <div class="card-title">Condicionalidades e distribuição da complementação-VAAR</div>
+      <p class="card-lead">Consulte qualquer município brasileiro por nome ou código IBGE. A página usa as bases oficiais do FNDE para as cinco condicionalidades, habilitação, evolução dos indicadores e condição de beneficiário. Quando disponível, também apresenta os indicadores numéricos e a previsão atualizada de complementação.</p>
+    </div>
+    <div class="vaar-source-note">Fonte: FNDE · Fundeb 2026 · 3ª publicação (Portaria MEC/MF nº 11/2026). Dados consultados sob demanda.</div>
+  </div>
+
+  <div class="vaar-cycle-note" role="note" aria-label="Observação sobre o exercício do VAAR">
+    <strong>Atenção ao exercício:</strong> os resultados, beneficiários e valores desta página referem-se ao <strong>VAAR 2026</strong>, isto é, à complementação destinada ao exercício financeiro de 2026. Eles <strong>não informam a situação do município para recebimento do VAAR 2027</strong>. Para 2027, as metodologias e regras de aferição já foram publicadas, mas a relação definitiva de redes habilitadas/beneficiárias e os respectivos valores ainda dependem da divulgação oficial do ciclo de 2027.
+  </div>
+
+  <details class="vaar-explainer" open>
+    <summary>Como foi calculado o VAAR 2026</summary>
+    <div class="vaar-explainer-body">
+      <p class="vaar-explainer-lead">O VAAR corresponde a 2,5 pontos percentuais do valor total do Fundeb, transferidos pela União às redes que cumprem os requisitos legais. Para 2026, a rede primeiro precisa cumprir as cinco condicionalidades de gestão. Depois, a distribuição considera a evolução em dois indicadores — atendimento e aprendizagem com redução das desigualdades — calculados pelo Inep. Estar habilitado, portanto, não significa automaticamente receber recursos.</p>
+      <div class="vaar-steps">
+        <article class="vaar-step"><span class="vaar-step-num">1</span><h4>Habilitação pelas cinco condicionalidades</h4><p>São verificadas as Condicionalidades I a V do art. 14 da Lei nº 14.113/2020. Para seguir para a distribuição do VAAR, a rede deve cumprir todas as cinco.</p></article>
+        <article class="vaar-step"><span class="vaar-step-num">2</span><h4>VAAR-Atendimento</h4><p>Usa o Censo Escolar de 2023 e 2024. O indicador mede a permanência, a partir do abandono escolar, e penaliza parcialmente registros sem informação de rendimento ou movimento. Pequenas oscilações negativas podem ser absorvidas por margem de flutuação que varia conforme o tamanho da rede.</p></article>
+        <article class="vaar-step"><span class="vaar-step-num">3</span><h4>VAAR-Aprendizagem</h4><p>Compara Saeb 2019 e 2023 e incorpora taxa de aprovação. O índice combina nível e avanço do desempenho, participação no Saeb e equidade, incluindo resultados de estudantes de baixo nível socioeconômico e de estudantes pretos, pardos e indígenas.</p></article>
+        <article class="vaar-step"><span class="vaar-step-num">4</span><h4>Divisão 50% + 50%</h4><p>O montante nacional do VAAR é dividido em duas parcelas iguais: 50% para redes que evoluíram no atendimento e 50% para redes que evoluíram na aprendizagem, sempre entre as redes previamente habilitadas.</p></article>
+        <article class="vaar-step"><span class="vaar-step-num">5</span><h4>Coeficiente de distribuição</h4><p>O valor de cada rede resulta do coeficiente calculado com as matrículas do Fundeb nas áreas de atuação prioritária e ponderadores ligados ao nível do indicador. No componente aprendizagem, o desempenho mais recente ajusta o peso da matrícula.</p></article>
+        <article class="vaar-step"><span class="vaar-step-num">6</span><h4>Valor previsto de 2026</h4><p>O RIDEedu cruza o coeficiente com o arquivo oficial “Redes beneficiadas, coeficientes de distribuição e complementação-VAAR prevista”, da 3ª publicação do Fundeb 2026, Portaria MEC/MF nº 11, de 28 de agosto de 2026.</p></article>
+      </div>
+      <div class="vaar-explainer-foot"><strong>Leitura dos valores:</strong> a quantia exibida é a previsão oficial da publicação mais recente do FNDE e pode ser revista em atualização posterior. A Condicionalidade III e o indicador VAAR-Aprendizagem são relacionados à equidade, mas são etapas distintas do processo.<br><span class="vaar-method-links">Metodologia oficial: <a href="https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/financiamento/fundeb/legislacao/2025/resolucao-cif-no-17.pdf/view" target="_blank" rel="noopener">Resolução CIF nº 17/2025 ↗</a> · <a href="https://download.inep.gov.br/fundeb/2026/nota_tecnica_34_atendimento_e_aprendizagem_2025.pdf" target="_blank" rel="noopener">Nota Técnica Inep nº 34/2025 ↗</a> · <a href="https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/financiamento/fundeb/2026" target="_blank" rel="noopener">Fundeb 2026/FNDE ↗</a></span></div>
+    </div>
+  </details>
+
+  <div class="vaar-search card">
+    <div class="vaar-search-grid">
+      <label class="vaar-field"><span>Município ou código IBGE</span><input id="vaarQuery" type="search" autocomplete="off" placeholder="Ex.: Juazeiro, Petrolina ou 2918407"></label>
+      <label class="vaar-field"><span>UF</span><select id="vaarUf"><option value="">Todas</option></select></label>
+      <label class="vaar-field"><span>Situação</span><select id="vaarStatus"><option value="">Todas</option><option value="habilitado">Habilitado</option><option value="nao-habilitado">Não habilitado</option><option value="beneficiario">Beneficiário</option><option value="nao-beneficiario">Não beneficiário</option></select></label>
+      <label class="vaar-field"><span>Condicionalidade III</span><select id="vaarCond3"><option value="">Todas</option><option value="sim">Cumpriu</option><option value="nao">Não cumpriu</option></select></label>
+    </div>
+    <div class="vaar-search-actions"><button class="vaar-btn" id="vaarSearchBtn" type="button">Pesquisar</button><button class="vaar-btn secondary" id="vaarClearBtn" type="button">Limpar</button><span id="vaarLoadState" class="vaar-load-state">Carregando base oficial…</span></div>
+  </div>
+
+  <div class="vaar-summary" id="vaarSummary"></div>
+  <div class="vaar-results card">
+    <div class="vaar-results-head"><div><div class="card-title">Resultados</div><p class="card-lead" id="vaarResultCount">Digite um município para consultar.</p></div></div>
+    <div class="table-wrap"><table class="vaar-table"><thead><tr><th>Município</th><th>UF</th><th>Cód. IBGE</th><th>Cond. III</th><th>Habilitação</th><th>Beneficiário</th><th>VAAR previsto</th><th></th></tr></thead><tbody id="vaarResultsBody"><tr><td colspan="8" class="vaar-empty">Aguardando consulta.</td></tr></tbody></table></div>
+    <div class="vaar-pagination" id="vaarPagination" hidden></div>
+  </div>
+  <div id="vaarDetail" class="vaar-detail card" hidden></div>
+</section>
+
+<!-- ══════════════════ POR MUNICÍPIO ══════════════════ -->
+<section class="panel" id="panel-municipio">
+  <div class="section-divider">Leitura integrada por município</div>
+  <div class="toolbar">
+    <select id="municipioSelect"></select>
+  </div>
+  <div class="kpi-row" id="municipioKpis"></div>
+
+  <div class="grid-2-eq" style="margin-bottom:18px">
+    <div class="card">
+      <div class="card-title">Série do Fundeb — 2020 a 2025</div>
+      <p class="card-lead">Trajetória de financiamento do município selecionado.</p>
+      <div class="chart-wrap h280"><canvas id="chartMunicipioFundeb"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Cobertura da educação infantil</div>
+      <p class="card-lead">Taxa líquida de matrículas em creche e pré-escola (2014–2025).</p>
+      <div class="chart-wrap h280"><canvas id="chartMunicipioInfantil"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Resumo interpretativo</div>
+    <p class="card-lead" id="municipioSummary"></p>
+    <div class="stat-grid" style="margin-top:14px" id="municipioMini"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ NOTÍCIAS ══════════════════ -->
+<section class="panel active" id="panel-noticias">
+
+  <div class="news-archive card">
+    <div><div class="card-title">Margens · edição atual</div><p class="card-lead">Notícias de 7 a 11 de novembro de 2026, com cobertura da RIDE, Bahia, Pernambuco e Brasil. Consulte também edições anteriores.</p></div>
+    <div class="news-archive-actions"><label class="news-issue-select"><span>Selecionar edição</span><select id="newsIssueSelect"></select></label><a class="news-pdf-link" id="newsPdfLink" href="#" target="_blank" rel="noopener">Abrir edição original em PDF ↗</a></div>
+  </div>
+
+  <article class="newspaper" id="ridediario">
+    <!-- Masthead -->
+    <header class="np-masthead">
+      <div class="np-meta-top">
+        <span>Ano I · Edição semanal</span>
+        <em>Noticiário verificado e análise da educação básica</em>
+        <span>Petrolina · Juazeiro</span>
+      </div>
+      <div class="np-title">Margens</div>
+      <div class="np-subtitle">Educação no Vale do São Francisco</div>
+      <div class="np-meta-bottom">
+        <span id="npWeekLabel">7 a 11 de novembro de 2026</span>
+        <span>Margens · semanal</span>
+        <span id="npShortDate">7 a 11 nov. 2026</span>
+      </div>
+    </header>
+
+    <!-- Números da semana -->
+    <div class="np-stats" id="npStats"></div>
+
+    <!-- Destaque da semana -->
+    <section class="np-spotlight" id="npSpotlight"></section>
+
+    <!-- Editorial em destaque -->
+    <section class="np-editorial" id="npEditorial"></section>
+
+    <!-- Conteúdo integral da edição, quando disponível -->
+    <div class="np-full-sections" id="npFullSections" hidden></div>
+
+    <!-- Body — manchete + colunas -->
+    <div class="np-body" id="npLegacyBody">
+      <div class="np-lead" id="npLead"></div>
+      <div class="np-side" id="npStories"></div>
+    </div>
+
+    <!-- Documento da semana -->
+    <section class="np-document" id="npDocument"></section>
+
+    <!-- Lower — agenda + temas -->
+    <div class="np-lower">
+      <div class="np-agenda">
+        <h3 class="np-section-title">Agenda da gestão</h3>
+        <p class="np-section-sub" id="npAgendaSub">Prazos e pontos de atenção para a gestão educacional</p>
+        <div class="np-classified" id="npAgenda"></div>
+      </div>
+      <aside class="np-themes">
+        <h3 class="np-section-title">Leitura temática</h3>
+        <p class="np-section-sub">Temas para acompanhar</p>
+        <div id="npThemes"></div>
+      </aside>
+    </div>
+
+    <!-- Fontes consultadas -->
+    <section class="np-sources">
+      <h3 class="np-section-title">Fontes consultadas</h3>
+      <p class="np-section-sub">Referências da edição</p>
+      <div id="npSources"></div>
+    </section>
+
+    <!-- Footer plate -->
+    <footer class="np-footer">
+      <span class="np-footer-stamp" id="npFooterStamp">Edição de 11/11/2026</span>
+      <span>Tiragem digital · Margens</span>
+      <span>Newsletter semanal · Vale do São Francisco</span>
+      <span id="npFooterSource">Fonte editorial: Margens · Semana de 15 a 21 de setembro de 2026</span>
+    </footer>
+  </article>
+
+  <!-- ══════════ Home: orçamento em destaque ══════════ -->
+  <section class="rn-budget" aria-labelledby="rnBudgetTitle">
+    <div class="rn-kicker">Orçamento e financiamento · 6º bimestre de 2025</div>
+    <h2 class="rn-h2" id="rnBudgetTitle">O orçamento da educação na RIDE em 2025</h2>
+    <div class="rn-kpis">
+      <div class="rn-kpi"><span class="rn-kpi-label">Fundeb</span><strong id="rnKpiFundeb">R$ 1.420,3 mi</strong><span>receita realizada somada dos oito municípios</span></div>
+      <div class="rn-kpi"><span class="rn-kpi-label">Educação infantil</span><strong id="rnKpiInfantil">R$ 427,4 mi</strong><span>investimentos estimados em creche e pré-escola</span></div>
+      <div class="rn-kpi"><span class="rn-kpi-label">Aplicação em MDE</span><strong id="rnKpiMde">25,6% a 30,1%</strong><span>do menor ao maior percentual municipal</span></div>
+      <div class="rn-kpi"><span class="rn-kpi-label">Remuneração</span><strong id="rnKpiRem">72,2% a 96,7%</strong><span>do Fundeb, com mínimo constitucional de 70%</span></div>
+    </div>
+    <div class="rn-actions">
+      <button type="button" class="rn-btn rn-btn-primary" data-panel-target="financas">Recursos e aplicação por município</button>
+      <button type="button" class="rn-btn" data-panel-target="evolucao">Evolução 2020–2025</button>
+      <button type="button" class="rn-btn" data-panel-target="vaar">VAAR 2026</button>
+    </div>
+  </section>
+
+  <!-- ══════════ Home: índice das seções de dados ══════════ -->
+  <section class="rn-directory" aria-labelledby="rnDirTitle">
+    <div class="rn-kicker rn-kicker-gold">Consulte os dados</div>
+    <h2 class="rn-h2" id="rnDirTitle">Todas as seções de dados</h2>
+    <p class="rn-dir-lead">Cada seção abre em uma nova aba do navegador. Esta página de notícias continua aberta.</p>
+    <div class="rn-dir-grid">
+      <div class="rn-dir-group">
+        <h3>Orçamento e financiamento</h3>
+        <button type="button" data-panel-target="financas">Recursos e aplicação</button>
+        <button type="button" data-panel-target="evolucao">Evolução 2020–2025</button>
+        <button type="button" data-panel-target="vaar">VAAR 2026</button>
+      </div>
+      <div class="rn-dir-group">
+        <h3>Aprendizagem e avaliação</h3>
+        <button type="button" data-panel-target="ideb2025">Ideb 2025</button>
+        <button type="button" data-panel-target="ideb">Ideb na RIDE</button>
+        <button type="button" data-panel-target="calculadoras">Estime o Ideb</button>
+        <button type="button" data-panel-target="alfabetizacao">Alfabetização</button>
+      </div>
+      <div class="rn-dir-group">
+        <h3>Rede e acesso</h3>
+        <button type="button" data-panel-target="infantil">Educação infantil</button>
+        <button type="button" data-panel-target="censo">Censo Escolar</button>
+      </div>
+      <div class="rn-dir-group">
+        <h3>Território</h3>
+        <button type="button" data-panel-target="visao">Visão geral</button>
+        <button type="button" data-panel-target="municipio">Por município</button>
+        <button type="button" data-panel-target="comparativo">Comparativo</button>
+        <button type="button" data-panel-target="desigualdades">Desigualdades</button>
+        <button type="button" data-panel-target="populacao">População</button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<div class="brand-footer">
+  <img class="brand-footer-logo" src="data:image/png;base64,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" alt="RIDE EDU — Plataforma de Dados Educacionais da Região Administrativa Integrada de Desenvolvimento do Polo Petrolina e Juazeiro" />
+  <div class="brand-footer-text">
+    <div class="brand-footer-title">RIDE EDU</div>
+    <div class="brand-footer-sub">Plataforma de Dados Educacionais da Região Administrativa Integrada de Desenvolvimento do Polo Petrolina e Juazeiro</div>
+    <div class="brand-footer-meta">8 municípios · Pernambuco e Bahia · Vale do São Francisco</div>
+  </div>
+</div>
+
+<div class="footer-note">
+  Fontes integradas: QEdu/Inep (Censo Escolar 2025 — rede municipal), arquivos de IDEB por município, tabelas do apêndice financeiro (RREO/Siope), Tabelas D13 e D14 e planilhas de taxa líquida de matrículas em creches e pré-escolas — série 2014–2025 (Observatório da Criança/Unicef). Os dados do Censo Escolar referem-se exclusivamente à rede pública municipal (escolas rurais e urbanas). Dados de 2025 no bloco financeiro correspondem ao 6º bimestre.
+</div>
+
+</main>
+
+<!-- ══════════════════ JS DATA + LOGIC ══════════════════ -->
+<script src="js/ride-dados.js?v=20261126-2"></script>
+<!-- Margens: edições do noticiário. A lista (newsletters/lista.js) é gerada sozinha a partir
+     de newsletters/edicoes/ (a mais recente é a da capa). Editar pelo painel: /admin -->
+<script src="newsletters/edicoes.js?v=20261126-6"></script>
+<script src="newsletters/lista.js"></script>
+<script src="newsletters/carregar.js?v=20261126-6"></script>
+<script src="js/ride-app.js?v=20261126-2"></script>
+<script src="ideb2025-data/index.js?v=20260806-1"></script>
+<script src="ideb2025-app.js?v=20261126-1"></script>
+<script src="ride-extras.js?v=20261126-4"></script>
+<script src="js/ride-init.js?v=20261126-4"></script>
+<script src="js/noticioso.js?v=20261126-5"></script>
+
+</body>
+</html>

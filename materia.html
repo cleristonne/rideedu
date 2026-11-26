@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margens · RIDE EDU</title>
+<meta name="description" content="Margens: educação no Vale do São Francisco. Reportagem da edição semanal do RIDE EDU.">
+<meta name="theme-color" content="#0B1530">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RIDE EDU">
+<meta property="og:title" content="Margens: educação no Vale do São Francisco">
+<meta property="og:description" content="Reportagem da edição semanal do Margens, noticiário de educação do RIDE EDU.">
+<meta property="og:image" content="https://rideedu.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ride-base.css?v=20261126-2">
+<link rel="stylesheet" href="ride-novo.css?v=20261126-4">
+<script src="ride-novo.js?v=20261126-1"></script>
+<link rel="stylesheet" href="css/noticioso.css?v=20261126-4">
+<link rel="stylesheet" href="css/materia.css?v=20261126-5">
+</head>
+<body class="mt-page">
+
+<!-- Cabeçalho: mesmo menu da página principal. Se o menu do index.html mudar, copie a <nav> para cá. -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html" title="Voltar à página de abertura" aria-label="RIDE EDU: voltar à página de abertura">
+      <div class="logo-mark"><img src="logo-ride-edu.png" alt="" width="449" height="200"></div>
+      <div class="logo-text">
+        <strong>RIDE <span class="edu-mark">EDU</span></strong>
+        <span>Polo Petrolina–Juazeiro</span>
+      </div>
+    </a>
+    <nav class="nav-scroll" aria-label="Navegação principal">
+      <button class="nav-tab nav-direct" data-panel="noticias">Notícias</button>
+
+      <details class="nav-group">
+        <summary>Orçamento</summary>
+        <div class="nav-menu" role="group" aria-label="Orçamento e financiamento">
+          <button class="nav-tab" data-panel="financas">Recursos e aplicação</button>
+          <button class="nav-tab" data-panel="evolucao">Evolução 2020–2025</button>
+          <button class="nav-tab" data-panel="vaar">VAAR 2026</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Aprendizagem</summary>
+        <div class="nav-menu" role="group" aria-label="Aprendizagem e avaliação">
+          <button class="nav-tab" data-panel="ideb2025">Ideb 2025</button>
+          <button class="nav-tab" data-panel="ideb">Ideb na RIDE</button>
+          <button class="nav-tab" data-panel="calculadoras">Estime o Ideb</button>
+          <button class="nav-tab" data-panel="alfabetizacao">Alfabetização</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Rede e acesso</summary>
+        <div class="nav-menu" role="group" aria-label="Rede e acesso">
+          <button class="nav-tab" data-panel="infantil">Educação infantil</button>
+          <button class="nav-tab" data-panel="censo">Censo Escolar</button>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Território</summary>
+        <div class="nav-menu" role="group" aria-label="Território">
+          <button class="nav-tab" data-panel="visao">Visão geral</button>
+          <button class="nav-tab" data-panel="municipio">Por município</button>
+          <button class="nav-tab" data-panel="comparativo">Comparativo</button>
+          <button class="nav-tab" data-panel="desigualdades">Desigualdades</button>
+          <button class="nav-tab" data-panel="populacao">População</button>
+        </div>
+      </details>
+
+      <button class="nav-tab nav-direct" data-panel="apresentacao">Sobre</button>
+    </nav>
+  </div>
+</header>
+
+<main class="mt-main" id="conteudo">
+  <p class="mt-loading" id="mtStatus">Carregando reportagem…</p>
+  <article class="mt-article" id="mtArticle" hidden></article>
+  <aside class="mt-more" id="mtMore" hidden></aside>
+</main>
+
+<footer class="mt-footer">
+  <a href="index.html" class="mt-footer-brand"><strong>Margens</strong> · educação no Vale do São Francisco</a>
+  <span>Uma publicação do RIDE EDU · Polo Petrolina–Juazeiro</span>
+</footer>
+
+<script src="newsletters/edicoes.js?v=20261126-6"></script>
+<script src="js/materia.js?v=20261126-5"></script>
+</body>
+</html>

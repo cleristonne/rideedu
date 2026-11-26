@@ -1,0 +1,100 @@
+RIDE EDU · COMO PUBLICAR UMA NOVA EDIÇÃO DO MARGENS (À MÃO)
+Há também o painel de edição em /admin: ver COMO-USAR-O-PAINEL.txt
+(Margens: educação no Vale do São Francisco, antigo Vale Educa)
+(organização em vigor a partir de 26/11/2026)
+
+Cada edição agora é um arquivo próprio. Não é mais preciso mexer no
+código do index.html: basta criar o arquivo da edição.
+
+ONDE FICAM AS EDIÇÕES
+  newsletters/edicoes/2026-11-20_26.js   ← edição atual
+  newsletters/edicoes/2026-11-07_11.js
+  newsletters/edicoes/2026-10-31_11-06.js
+  newsletters/edicoes/2026-09-15_21.js
+  newsletters/edicoes/2026-08-08_14.js
+
+PASSO A PASSO
+1. Copie o arquivo da edição mais recente e renomeie com o período da
+   nova edição, no formato AAAA-MM-DD_DD. Exemplo: 2026-11-27_12-03.js
+   (o nome é o "id" da edição).
+
+2. No arquivo novo, troque:
+   - a primeira linha do registrar: {"rotulo": "27 nov. a 3 dez. 2026"}
+     → texto que aparece no seletor de edições ("· edição atual" é
+       acrescentado sozinho à primeira edição da lista);
+   - "id": igual ao nome do arquivo, sem ".js";
+   - weekLabel, shortDate, dateLabel, footerStamp, footerSource, agendaSub;
+   - spotlight (manchete), stats (números do topo), editorial,
+     sections (matérias), agenda, themes, sources, documentWeek;
+   - "pdf": "newsletters/NOME.pdf" (opcional; sem pdf o botão some).
+   O conteúdo entre os parênteses é JSON: textos entre aspas duplas,
+   itens separados por vírgula e sem vírgula depois do último item.
+
+3. Atualize a lista de edições (não é mais preciso mexer no index.html):
+     node ferramentas/gerar-lista.js
+   A lista fica em newsletters/lista.js, da edição mais recente (pelo
+   código no nome do arquivo) para a mais antiga; a mais recente abre
+   na capa. Com o site ligado ao GitHub, isso é feito sozinho a cada
+   publicação. Para preparar uma edição sem publicá-la, acrescente
+   "oculta": true logo depois de "id" (ou use o painel).
+
+4. Confira (se tiver Node.js instalado), na pasta do site:
+     node ferramentas/validar-edicoes.js
+   Ele aponta erros de digitação no JSON, campos obrigatórios faltando,
+   id diferente do nome do arquivo e edição fora de newsletters/lista.js.
+   Avisos (por exemplo, matéria sem link de fonte) não impedem a publicação.
+
+5. Publique a pasta no Netlify, como sempre.
+
+O cartão "Margens" da aba Sobre e o rodapé passam a mostrar a nova
+edição automaticamente.
+
+REPORTAGEM COMPLETA EM PÁGINA PRÓPRIA (materia.html)
+  Cada título da capa abre, em nova aba, a página da reportagem:
+    materia.html?ed=<id da edição>&m=<título sem acentos, com hífens>
+  Não é preciso criar nada: a página lê o mesmo arquivo da edição.
+  Tudo o que estiver em "paragraphs" aparece inteiro na página da
+  reportagem; na capa aparece só o começo. Para uma reportagem mais
+  longa, basta acrescentar parágrafos à lista.
+  O editorial também tem página própria (&m=editorial).
+  CUIDADO: o endereço usa o título. Se o título de uma matéria for
+  alterado depois de publicado, links já compartilhados deixam de
+  abrir a matéria (a página mostra "Reportagem não encontrada").
+
+CAMPOS DE CADA MATÉRIA (sections → stories)
+  rubric, title, paragraphs ["parágrafo 1", "parágrafo 2"],
+  sourceLabel (veículo), sourceUrl (link), published (data),
+  service (opcional: "Para a gestão"), photo, credit e photoSource
+  (opcionais: fotografia, crédito e link da imagem).
+  dek (opcional): linha fina, frase abaixo do título; aparece também
+  na capa no lugar do começo do texto.
+  byline (opcional): assinatura, ex.: "Redação Margens". Com assinatura,
+  a fonte aparece como "Com informações de ...".
+  Intertítulo: um item de "paragraphs" que começa com "## " vira
+  intertítulo na página da reportagem. Ex.: "## Próximos passos".
+  O primeiro item deve ser um parágrafo normal (é o início do texto).
+
+ESTRUTURA GERAL DO SITE (para manutenção)
+  index.html               página (HTML) e a lista de arquivos carregados
+  css/ride-base.css        estilos-base (antes dentro do index.html)
+  ride-novo.css            redesign e ajustes, carregado depois (se sobrepõe)
+  css/noticias-fotos.css   fotografias das matérias
+  js/ride-dados.js         dados municipais (Fundeb, Censo, população etc.)
+  newsletters/edicoes.js   registro das edições do Vale Educa
+  newsletters/edicoes/     uma edição por arquivo
+  js/ride-app.js           lógica do site: gráficos, seções, notícias, VAAR
+  ride-novo.js             menu de celular, rótulos dos gráficos
+  ride-extras.js           busca, downloads, ordenação, impressão, links
+  css/noticioso.css        capa em padrão de jornal (aba Notícias)
+  js/noticioso.js          links das manchetes para a reportagem completa
+  materia.html             página da reportagem (css/materia.css, js/materia.js)
+                           o menu do cabeçalho é cópia do index.html: se o
+                           menu mudar, copie a <nav> também para materia.html
+  js/ride-init.js          inicialização final
+  ideb2025-*               consulta nacional do Ideb 2025 (sem alteração)
+  netlify/functions/vaar.js  consulta do VAAR (sem alteração)
+
+ATENÇÃO
+  Ao mudar um arquivo .css ou .js, aumente o número depois de "?v=" na
+  linha correspondente do index.html, para que os navegadores baixem a
+  versão nova em vez de usar a cópia guardada.
