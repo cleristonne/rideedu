@@ -1,0 +1,156 @@
+{
+  "totais": {
+    "municipios": 5571,
+    "registrosMunicipais": 40682,
+    "registrosEscolares": 136314
+  },
+  "ufs": {
+    "AC": {
+      "municipios": 176,
+      "escolas": 709,
+      "bytes": 230532
+    },
+    "AL": {
+      "municipios": 770,
+      "escolas": 2551,
+      "bytes": 909737
+    },
+    "AP": {
+      "municipios": 123,
+      "escolas": 709,
+      "bytes": 220949
+    },
+    "AM": {
+      "municipios": 509,
+      "escolas": 3217,
+      "bytes": 1007623
+    },
+    "BA": {
+      "municipios": 3071,
+      "escolas": 11822,
+      "bytes": 4027051
+    },
+    "CE": {
+      "municipios": 1279,
+      "escolas": 7668,
+      "bytes": 2378144
+    },
+    "DF": {
+      "municipios": 8,
+      "escolas": 800,
+      "bytes": 217614
+    },
+    "ES": {
+      "municipios": 623,
+      "escolas": 2446,
+      "bytes": 827701
+    },
+    "GO": {
+      "municipios": 1830,
+      "escolas": 4363,
+      "bytes": 1647588
+    },
+    "MA": {
+      "municipios": 1619,
+      "escolas": 8266,
+      "bytes": 2624779
+    },
+    "MT": {
+      "municipios": 1108,
+      "escolas": 2885,
+      "bytes": 985445
+    },
+    "MS": {
+      "municipios": 627,
+      "escolas": 1890,
+      "bytes": 649535
+    },
+    "MG": {
+      "municipios": 6107,
+      "escolas": 13348,
+      "bytes": 5100584
+    },
+    "PA": {
+      "municipios": 973,
+      "escolas": 7361,
+      "bytes": 2315393
+    },
+    "PB": {
+      "municipios": 1731,
+      "escolas": 3729,
+      "bytes": 1391897
+    },
+    "PR": {
+      "municipios": 2480,
+      "escolas": 6645,
+      "bytes": 2465722
+    },
+    "PE": {
+      "municipios": 1433,
+      "escolas": 6185,
+      "bytes": 2110990
+    },
+    "PI": {
+      "municipios": 1631,
+      "escolas": 4012,
+      "bytes": 1447394
+    },
+    "RJ": {
+      "municipios": 756,
+      "escolas": 7424,
+      "bytes": 2276750
+    },
+    "RN": {
+      "municipios": 1304,
+      "escolas": 2756,
+      "bytes": 1068727
+    },
+    "RS": {
+      "municipios": 3752,
+      "escolas": 9054,
+      "bytes": 3454888
+    },
+    "RO": {
+      "municipios": 413,
+      "escolas": 1368,
+      "bytes": 454025
+    },
+    "RR": {
+      "municipios": 122,
+      "escolas": 578,
+      "bytes": 180268
+    },
+    "SC": {
+      "municipios": 2220,
+      "escolas": 5071,
+      "bytes": 1905191
+    },
+    "SP": {
+      "municipios": 4378,
+      "escolas": 17825,
+      "bytes": 6141198
+    },
+    "SE": {
+      "municipios": 597,
+      "escolas": 1920,
+      "bytes": 690822
+    },
+    "TO": {
+      "municipios": 1042,
+      "escolas": 1712,
+      "bytes": 694327
+    }
+  },
+  "redesMunicipios": [
+    "Estadual",
+    "Federal",
+    "Municipal",
+    "Pública"
+  ],
+  "redesEscolas": [
+    "Estadual",
+    "Federal",
+    "Municipal",
+    "Privada"
+  ]
+}
