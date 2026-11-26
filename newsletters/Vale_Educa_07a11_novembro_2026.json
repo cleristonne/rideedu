@@ -1,0 +1,392 @@
+{
+  "id": "2026-11-07_11",
+  "issue": "Ano I · edição semanal",
+  "weekLabel": "7 a 11 de novembro de 2026",
+  "shortDate": "7 a 11 nov. 2026",
+  "dateLabel": "11 de novembro de 2026",
+  "footerStamp": "Edição de 11/11/2026",
+  "footerSource": "Vale Educa · RIDE EDU · 7 a 11 de novembro de 2026",
+  "agendaSub": "Prazos e orientações anunciados pelas redes e órgãos responsáveis",
+  "pdf": "newsletters/Vale_Educa_07a11_novembro_2026.pdf",
+  "stats": [
+    {
+      "rubric": "Enem · rede pública",
+      "value": "65%",
+      "label": "participação preliminar de concluintes, ante 53,8% em 2025",
+      "color": "blue"
+    },
+    {
+      "rubric": "Pernambuco · formação técnica",
+      "value": "9.530",
+      "label": "vagas anunciadas em cursos técnicos presenciais para 2027",
+      "color": "green"
+    },
+    {
+      "rubric": "Bahia · matrículas 2027",
+      "value": "16–27",
+      "label": "de novembro: renovação na rede estadual",
+      "color": "amber"
+    },
+    {
+      "rubric": "Bahia · SABE 2026",
+      "value": "23/11",
+      "label": "início previsto das avaliações, com término em 4 de dezembro",
+      "color": "terra"
+    }
+  ],
+  "spotlight": {
+    "rubric": "Assunto de capa · Educação e tecnologia",
+    "title": "Novas diretrizes para inteligência artificial chegam às escolas brasileiras",
+    "dek": "Parecer do Conselho Nacional de Educação homologado em 10 de novembro delimita riscos e responsabilidades no uso de IA. Supervisão humana, proteção de dados e mediação docente estão no centro da proposta."
+  },
+  "editorial": {
+    "rubric": "Editorial · Vale Educa",
+    "title": "A inteligência artificial não pode tomar o lugar do juízo pedagógico",
+    "byline": "Redação RIDE EDU",
+    "place": "Polo Petrolina–Juazeiro · 11 de novembro de 2026",
+    "paragraphs": [
+      "A homologação, pelo Ministério da Educação, das diretrizes nacionais para o uso da inteligência artificial recoloca uma pergunta que as redes de ensino já enfrentam: o que pode ser automatizado sem retirar de professores e gestores a responsabilidade por decisões que afetam trajetórias escolares?",
+      "As ferramentas podem organizar registros, apoiar a preparação de materiais e facilitar a análise de informações. Seu uso, porém, exige condições que não surgem automaticamente com a compra de uma licença. É necessário saber quais dados entram nos sistemas, quem responde por erros, como se previnem vieses e de que modo famílias e estudantes podem contestar decisões.",
+      "O parecer homologado em 10 de novembro sinaliza limites concretos: não admite que a tecnologia determine sozinha avaliações ou sanções com consequências relevantes, proíbe certas formas de vigilância e restringe o uso direto e sem mediação nos primeiros anos escolares. Essas medidas demandarão regulamentação, formação e acompanhamento. Segundo o governo federal, as vedações passam a valer a partir da publicação da resolução, e os sistemas de ensino terão doze meses para adequações.",
+      "O debate tem particular importância para os oito municípios da RIDE Petrolina–Juazeiro. As redes convivem com diferenças de infraestrutura digital, conectividade, formação dos profissionais e capacidade de contratar e fiscalizar serviços tecnológicos. A mesma ferramenta pode apoiar o trabalho em uma escola e ampliar desigualdades em outra que não dispõe de equipamentos ou pessoal suficiente.",
+      "Há um risco de repetir, com a IA, o equívoco de transformar indicadores em respostas prontas. Dados e modelos estatísticos ajudam a localizar problemas, mas não explicam toda a experiência de estudantes e professores. Uma decisão pedagógica exige escuta, conhecimento do contexto, interpretação dos resultados e responsabilidade pública. Nenhum sistema deveria reduzir a criança a uma previsão de desempenho.",
+      "As secretarias precisam começar por questões práticas: inventariar os sistemas de IA em uso, examinar contratos e fluxos de dados, formular orientações de proteção de estudantes e oferecer formação que inclua também o direito de não utilizar a tecnologia quando ela não acrescenta valor à aprendizagem. O caminho passa pela participação das escolas e dos conselhos, em vez da adoção apressada de soluções padronizadas.",
+      "Uma política educacional responsável pode usar inteligência artificial. A qualidade dessa política continuará dependendo da capacidade humana e institucional de definir prioridades, reconhecer desigualdades e corrigir rumos."
+    ]
+  },
+  "sections": [
+    {
+      "kicker": "Oito municípios · pauta regional",
+      "title": "Na RIDE Petrolina–Juazeiro",
+      "stories": [
+        {
+          "rubric": "Juazeiro (BA) · 09/11",
+          "title": "Aprova Juazeiro realiza primeiro aulão preparatório",
+          "paragraphs": [
+            "O primeiro encontro do projeto ocorreu no sábado, 7 de novembro, com aulas voltadas à preparação para exames e processos seletivos. A ação é organizada pela Prefeitura de Juazeiro, por meio da Secretaria da Mulher e Juventude.",
+            "O formato de aulões pode apoiar a revisão de conteúdos, mas deve ser acompanhado de orientação sobre provas, acesso a inscrições e continuidade do estudo."
+          ],
+          "sourceLabel": "Prefeitura de Juazeiro",
+          "sourceUrl": "https://www.juazeiro.ba.gov.br/primeiro-aulao-do-aprova-juazeiro-reune-estudantes-em-preparacao-para-exames-e-processos-seletivos/",
+          "published": "09/11/2026",
+          "service": "Acompanhar a segunda atividade do projeto e divulgar os canais oficiais de inscrição aos estudantes."
+        },
+        {
+          "rubric": "Juazeiro (BA) · 07/11",
+          "title": "Semana Clóvis Moura reúne debates sobre antirracismo e educação",
+          "paragraphs": [
+            "A prefeitura divulgou em 7 de novembro balanço da I Semana Clóvis Moura, realizada de 4 a 6 de novembro pela Univasf, com apoio da Secretaria Municipal de Educação e parceiros. A programação tratou de identidade racial, diversidade, pertencimento e políticas de enfrentamento ao racismo.",
+            "Para as escolas, a pauta dialoga com a educação para as relações étnico-raciais e com o trabalho pedagógico previsto na legislação curricular."
+          ],
+          "sourceLabel": "Prefeitura de Juazeiro",
+          "sourceUrl": "https://www.juazeiro.ba.gov.br/juazeiro-celebra-o-mes-das-consciencias-negras-com-a-i-semana-clovis-moura/",
+          "published": "07/11/2026"
+        },
+        {
+          "rubric": "Juazeiro (BA) · 10/11",
+          "title": "Estudantes e familiares relatam calor excessivo em escolas estaduais",
+          "paragraphs": [
+            "Reportagem do portal Preto no Branco reuniu queixas de estudantes do Colégio Estadual de Tempo Integral Agostinho Muniz e de familiares ligados ao Colégio Rotary Club sobre ventilação e climatização insuficientes em salas de aula.",
+            "O veículo informou ter encaminhado os relatos ao Núcleo Territorial de Educação 10. As reclamações são apresentadas como depoimentos; a publicação consultada não comprova, por medição técnica, a situação de todas as salas nem apresenta resposta conclusiva do órgão."
+          ],
+          "sourceLabel": "Portal Preto no Branco",
+          "sourceUrl": "https://pretonobranco.org/2026/11/10/a-gente-sai-da-aula-passando-mal-com-dor-de-cabeca-relatam-alunos-sobre-calor-em-escolas-estaduais-de-juazeiro/",
+          "published": "10/11/2026",
+          "service": "Verificar condições térmicas, funcionamento de equipamentos e eventual posicionamento oficial, preservando o contraditório."
+        },
+        {
+          "rubric": "Petrolina (PE) · 09/11",
+          "title": "Segunda chamada atende continuidade na educação infantil em 2027",
+          "paragraphs": [
+            "A rede municipal de Petrolina abriu segunda chamada para estudantes dos grupos 3 e 5 das unidades Nossa Infância que precisarão mudar de escola na etapa seguinte. A prioridade inclui crianças não contempladas na primeira chamada e matrículas realizadas depois daquela fase.",
+            "As famílias podem indicar até cinco unidades de preferência e acompanhar o resultado, observados critérios de proximidade residencial e existência de irmãos na escola."
+          ],
+          "sourceLabel": "Blog do Farnésio / Ascom Petrolina",
+          "sourceUrl": "https://blogdofarnesio.com.br/2026/11/prefeitura-de-petrolina-abre-segunda-chamada-para-continuidade-na-educacao-infantil/",
+          "published": "09/11/2026",
+          "service": "Orientações e procedimentos disponíveis no portal da Secretaria Municipal: edu.petrolina.g12.br."
+        },
+        {
+          "rubric": "Lagoa Grande (PE) · 10/11",
+          "title": "Município divulga calendário de rematrículas e novas matrículas para 2027",
+          "paragraphs": [
+            "O cronograma anunciado pela Secretaria de Educação de Lagoa Grande prevê rematrículas na educação infantil de 5 a 11 de novembro; nos anos iniciais e EJA (1ª e 2ª fases), de 12 a 18; nos anos finais e EJA (3ª e 4ª fases), de 19 a 26.",
+            "Para estudantes novos, a matrícula está prevista de 5 a 15 de janeiro de 2027. A rematrícula dos atuais estudantes é feita na própria escola."
+          ],
+          "sourceLabel": "Lagoa Grande Notícias / Ascom municipal",
+          "sourceUrl": "https://lagoagrandenoticias.com/2026/11/10/educacao-em-movimento-lagoa-grande-anuncia-calendario-de-matriculas-e-rematriculas-para-2027-confira-os-prazos-por-etapa-de-ensino/",
+          "published": "10/11/2026",
+          "service": "Divulgar os períodos por etapa para evitar perda dos prazos de continuidade."
+        }
+      ]
+    },
+    {
+      "kicker": "Política estadual · Bahia",
+      "title": "Bahia: avaliação, matrícula e infraestrutura",
+      "stories": [
+        {
+          "rubric": "Bahia · 09/11",
+          "title": "SEC mobiliza municípios para avaliação de fluência leitora do SABE 2026",
+          "paragraphs": [
+            "A Secretaria da Educação convocou as redes municipais para orientações sobre aplicação, cronograma e responsabilidades relativas ao Sistema de Avaliação Baiano da Educação. O encontro virtual estava marcado para 10 de novembro.",
+            "A avaliação de fluência leitora, voltada ao 3º ano do ensino fundamental, ocorrerá de 23 de novembro a 4 de dezembro. O SABE também prevê avaliações em outras etapas escolares, segundo o calendário estadual."
+          ],
+          "sourceLabel": "SEC Bahia",
+          "sourceUrl": "https://www.ba.gov.br/educacao/noticias/2026-11/3700/sec-mobiliza-redes-municipais-para-avaliacao-de-fluencia-leitora-do-sabe-2026",
+          "published": "09/11/2026",
+          "service": "Conferir organização de turmas, aplicadores e comunicação com as escolas antes de 23 de novembro."
+        },
+        {
+          "rubric": "Bahia · 10/11",
+          "title": "Rede estadual abre renovação de matrícula de 16 a 27 de novembro",
+          "paragraphs": [
+            "A SEC confirmou o calendário para estudantes matriculados em 2026 que permanecerão na rede em 2027. Alunos com 16 anos ou mais podem renovar preferencialmente pelo portal ba.gov.br; os menores de 16 anos dependem de atendimento presencial por pais ou responsáveis na escola.",
+            "As unidades devem orientar estudantes e famílias e assegurar o atendimento para quem não conseguir concluir o processo digital."
+          ],
+          "sourceLabel": "SEC Bahia",
+          "sourceUrl": "https://www.ba.gov.br/educacao/noticias/2026-11/3704/renovacao-de-matricula-da-rede-estadual-de-ensino-da-bahia-para-2027-comeca",
+          "published": "10/11/2026",
+          "service": "Organizar acolhimento presencial e comunicação clara sobre documentação e prazos."
+        },
+        {
+          "rubric": "Bahia · 09/11",
+          "title": "Arataca recebe colégio estadual de tempo integral e transporte escolar",
+          "paragraphs": [
+            "O Estado inaugurou o Colégio Estadual de Tempo Integral Maria Felipa, em Arataca, com investimento informado acima de R$ 25,8 milhões, além de um ônibus rural escolar. A estrutura inclui dez salas de aula, laboratórios, biblioteca, sala de AEE e espaços esportivos e culturais.",
+            "A entrega amplia a capacidade física da oferta, mas os efeitos sobre frequência e aprendizagem dependem do funcionamento contínuo dos serviços e da proposta pedagógica."
+          ],
+          "sourceLabel": "SEC Bahia",
+          "sourceUrl": "https://www.ba.gov.br/educacao/noticias/2026-11/3701/governo-do-estado-entrega-nova-escola-estadual-de-tempo-integral-e-onibus",
+          "published": "09/11/2026"
+        }
+      ]
+    },
+    {
+      "kicker": "Política estadual · Pernambuco",
+      "title": "Pernambuco: educação profissional abre novas oportunidades",
+      "stories": [
+        {
+          "rubric": "Pernambuco · 10/11",
+          "title": "Rede estadual anuncia 9.530 vagas em cursos técnicos presenciais",
+          "paragraphs": [
+            "Edital divulgado pela Secretaria Estadual de Educação oferta 9.530 vagas em 32 cursos técnicos subsequentes, voltados a pessoas que já concluíram o ensino médio. As oportunidades estão distribuídas por 71 Escolas Técnicas Estaduais em 50 municípios.",
+            "As inscrições serão gratuitas, de 16 a 27 de novembro. As provas estão previstas de 1º a 10 de dezembro e o início das aulas para fevereiro de 2027."
+          ],
+          "sourceLabel": "CBN Recife",
+          "sourceUrl": "https://www.cbnrecife.com/2026/11/10/see-divulga-edital-para-cursos-tecnicos-subsequentes-presenciais-em-50-municipios-de-pernambuco/",
+          "published": "10/11/2026",
+          "service": "Orientar concluintes do ensino médio sobre vagas, critérios e datas do edital."
+        },
+        {
+          "rubric": "Pernambuco · 10/11",
+          "title": "ETE de Criatividade Musical abre 200 vagas para 2027",
+          "paragraphs": [
+            "A Secretaria de Educação abriu inscrições para cursos técnicos de música da ETE de Criatividade Musical, no Recife. São 200 vagas nas modalidades concomitante e subsequente, em habilitações de canto e instrumentos musicais.",
+            "As candidaturas são gratuitas, pela internet, até 20 de novembro, com seleção por provas teóricas e práticas."
+          ],
+          "sourceLabel": "Terra / SEE Pernambuco",
+          "sourceUrl": "https://www.terra.com.br/amp/noticias/educacao/carreira/selecao-em-pernambuco-abre-200-vagas-em-cursos-tecnicos-gratuitos-de-musica-confira-como-se-inscrever%2Cab41f9ded0459630f53af54dae4359236rl94ymv.html",
+          "published": "10/11/2026",
+          "service": "Divulgar o processo a estudantes e egressos com interesse em formação musical."
+        }
+      ]
+    },
+    {
+      "kicker": "Agenda nacional · Brasil",
+      "title": "Brasil: novas diretrizes e avaliações",
+      "stories": [
+        {
+          "rubric": "Brasil · 10/11",
+          "title": "MEC homologa parecer do CNE sobre uso de inteligência artificial na educação",
+          "paragraphs": [
+            "O parecer estabelece supervisão humana para decisões educacionais, quatro níveis de risco e limites a ferramentas que façam vigilância, atribuam notas interpretativas sem julgamento docente ou usem dados escolares para publicidade direcionada.",
+            "Na educação infantil e até o 5º ano, o uso autônomo ou sem supervisão de IA não deverá ser permitido. O governo informa que as vedações terão aplicação a partir da publicação da resolução, com doze meses para adequação de políticas e contratos."
+          ],
+          "sourceLabel": "Governo Federal / MEC",
+          "sourceUrl": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/governo-federal-estabelece-diretrizes-para-uso-responsavel-da-ia-na-educacao",
+          "published": "10/11/2026",
+          "service": "Mapear ferramentas em uso e verificar proteção de dados, contratos, formação docente e processos de decisão."
+        },
+        {
+          "rubric": "Brasil · 08/11",
+          "title": "Enem registra participação preliminar de 65% dos concluintes da rede pública",
+          "paragraphs": [
+            "Balanço inicial do Inep apontou que 65% dos concluintes do ensino médio público participaram do primeiro dia do Enem 2026, ante 53,8% em 2025, com cerca de 250 mil presentes a mais nessa condição. O exame somou 5,05 milhões de inscrições confirmadas.",
+            "O tema da redação foi “A valorização do Sistema Único de Saúde (SUS) como direito universal”. A etapa de matemática e ciências da natureza será aplicada em 15 de novembro."
+          ],
+          "sourceLabel": "Inep",
+          "sourceUrl": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-tem-participacao-recorde-de-concluintes-da-rede-publica",
+          "published": "08/11/2026",
+          "service": "Preparar ações de orientação e apoio para o segundo domingo de prova."
+        },
+        {
+          "rubric": "Brasil · 10/11",
+          "title": "PND divulga correção preliminar da questão discursiva",
+          "paragraphs": [
+            "O Inep publicou no Sistema PND a correção preliminar das respostas discursivas da Prova Nacional Docente 2026. O prazo para recursos vai até 12 de novembro.",
+            "A contestação deve se limitar à pontuação atribuída conforme os critérios da expectativa de resposta. O resultado final da PND está previsto no calendário do Inep para 15 de dezembro."
+          ],
+          "sourceLabel": "Inep",
+          "sourceUrl": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/prova-nacional-docente/pnd-2026-divulgada-correcao-preliminar-da-questao-discursiva",
+          "published": "10/11/2026",
+          "service": "Candidatos devem conferir a nota e registrar recurso dentro do prazo, quando cabível."
+        },
+        {
+          "rubric": "Brasil · 10/11",
+          "title": "Ausência no primeiro dia não impede participação no segundo domingo do Enem",
+          "paragraphs": [
+            "Segundo o Inep, o participante que faltou em 8 de novembro pode comparecer à prova de 15 de novembro. Faltar, por si só, não assegura direito à reaplicação.",
+            "Pedidos de reaplicação por situações previstas no edital, como problemas logísticos, desastres naturais e determinadas doenças infectocontagiosas, poderão ser apresentados entre 16 e 20 de novembro."
+          ],
+          "sourceLabel": "Inep",
+          "sourceUrl": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-quem-faltou-ao-primeiro-dia-pode-fazer-a-prova-no-segundo",
+          "published": "10/11/2026",
+          "service": "Comunicar a orientação a estudantes e responsáveis, evitando desinformação sobre elegibilidade à reaplicação."
+        }
+      ]
+    }
+  ],
+  "documentWeek": {
+    "rubric": "Documento da semana · CNE/MEC",
+    "title": "Parecer CNE/CP nº 15/2026: diretrizes de inteligência artificial",
+    "body": "O Conselho Nacional de Educação aprovou diretrizes para o uso de inteligência artificial na educação brasileira; o MEC homologou o parecer em 10 de novembro. Antes de mudanças de política institucional, é necessário acompanhar a publicação da resolução e examinar as disposições aplicáveis.",
+    "link": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/governo-federal-estabelece-diretrizes-para-uso-responsavel-da-ia-na-educacao",
+    "linkLabel": "Consultar comunicado oficial do MEC"
+  },
+  "agenda": [
+    {
+      "kind": "ate",
+      "day": "12",
+      "month": "NOV",
+      "tag": "Prazo final",
+      "label": "PND 2026 · recurso da questão discursiva",
+      "text": "Candidatos podem contestar a pontuação da correção preliminar no Sistema PND, conforme regras do Inep."
+    },
+    {
+      "kind": "data",
+      "day": "15",
+      "month": "NOV",
+      "tag": "Prova",
+      "label": "Enem 2026 · segundo domingo",
+      "text": "Aplicação das provas de matemática e ciências da natureza. Horários seguem o edital e o horário de Brasília."
+    },
+    {
+      "kind": "intervalo",
+      "day": "16",
+      "month": "NOV",
+      "endDay": "27",
+      "endMonth": "NOV",
+      "tag": "Matrículas",
+      "label": "Bahia · renovação da rede estadual 2027",
+      "text": "De 16 a 27/11, preferencialmente on-line para estudantes de 16 anos ou mais; presencial para menores."
+    },
+    {
+      "kind": "intervalo",
+      "day": "16",
+      "month": "NOV",
+      "endDay": "27",
+      "endMonth": "NOV",
+      "tag": "Inscrições",
+      "label": "Pernambuco · 9.530 vagas em cursos técnicos",
+      "text": "Seleção gratuita de cursos técnicos subsequentes presenciais nas ETEs."
+    },
+    {
+      "kind": "ate",
+      "day": "20",
+      "month": "NOV",
+      "tag": "Prazo final",
+      "label": "ETE de Criatividade Musical · 200 vagas",
+      "text": "Encerramento anunciado das inscrições gratuitas para os cursos técnicos de música no Recife."
+    },
+    {
+      "kind": "intervalo",
+      "day": "23",
+      "month": "NOV",
+      "endDay": "04",
+      "endMonth": "DEZ",
+      "tag": "Avaliação",
+      "label": "SABE 2026 · período de aplicação",
+      "text": "Redes baianas organizam avaliações conforme etapas, turmas e calendário estadual."
+    }
+  ],
+  "themes": [
+    [
+      "Tecnologia e direitos",
+      "Supervisão humana, proteção de dados e decisões escolares nas diretrizes nacionais de IA."
+    ],
+    [
+      "Acesso e permanência",
+      "Matrículas de 2027, aulões e participação de concluintes da escola pública no Enem."
+    ],
+    [
+      "Avaliação e intervenção",
+      "Fluência leitora e resultados do Enem precisam orientar apoio pedagógico contextualizado."
+    ],
+    [
+      "Desigualdade territorial",
+      "Condições de infraestrutura e oportunidades distintas entre redes exigem respostas localizadas."
+    ]
+  ],
+  "sources": [
+    {
+      "label": "Governo Federal / MEC · 10/11/2026 · IA na educação",
+      "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/governo-federal-estabelece-diretrizes-para-uso-responsavel-da-ia-na-educacao"
+    },
+    {
+      "label": "Inep · 08/11/2026 · participação no Enem",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-tem-participacao-recorde-de-concluintes-da-rede-publica"
+    },
+    {
+      "label": "Inep · 10/11/2026 · Enem: segundo dia e reaplicação",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-quem-faltou-ao-primeiro-dia-pode-fazer-a-prova-no-segundo"
+    },
+    {
+      "label": "Inep · 10/11/2026 · correção preliminar da PND",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/prova-nacional-docente/pnd-2026-divulgada-correcao-preliminar-da-questao-discursiva"
+    },
+    {
+      "label": "SEC Bahia · 09/11/2026 · avaliação de fluência SABE",
+      "url": "https://www.ba.gov.br/educacao/noticias/2026-11/3700/sec-mobiliza-redes-municipais-para-avaliacao-de-fluencia-leitora-do-sabe-2026"
+    },
+    {
+      "label": "SEC Bahia · 10/11/2026 · mobilização SABE",
+      "url": "https://www.ba.gov.br/educacao/noticias/2026-11/3708/estado-e-municipios-se-mobilizam-para-aplicacao-das-provas-do-sistema-de"
+    },
+    {
+      "label": "SEC Bahia · 10/11/2026 · renovação da matrícula",
+      "url": "https://www.ba.gov.br/educacao/noticias/2026-11/3704/renovacao-de-matricula-da-rede-estadual-de-ensino-da-bahia-para-2027-comeca"
+    },
+    {
+      "label": "SEC Bahia · 09/11/2026 · escola integral em Arataca",
+      "url": "https://www.ba.gov.br/educacao/noticias/2026-11/3701/governo-do-estado-entrega-nova-escola-estadual-de-tempo-integral-e-onibus"
+    },
+    {
+      "label": "Prefeitura de Juazeiro · 09/11/2026 · Aprova Juazeiro",
+      "url": "https://www.juazeiro.ba.gov.br/primeiro-aulao-do-aprova-juazeiro-reune-estudantes-em-preparacao-para-exames-e-processos-seletivos/"
+    },
+    {
+      "label": "Prefeitura de Juazeiro · 07/11/2026 · Semana Clóvis Moura",
+      "url": "https://www.juazeiro.ba.gov.br/juazeiro-celebra-o-mes-das-consciencias-negras-com-a-i-semana-clovis-moura/"
+    },
+    {
+      "label": "Portal Preto no Branco · 10/11/2026 · relatos de calor em escolas",
+      "url": "https://pretonobranco.org/2026/11/10/a-gente-sai-da-aula-passando-mal-com-dor-de-cabeca-relatam-alunos-sobre-calor-em-escolas-estaduais-de-juazeiro/"
+    },
+    {
+      "label": "Blog do Farnésio / Ascom Petrolina · 09/11/2026 · educação infantil 2027",
+      "url": "https://blogdofarnesio.com.br/2026/11/prefeitura-de-petrolina-abre-segunda-chamada-para-continuidade-na-educacao-infantil/"
+    },
+    {
+      "label": "Lagoa Grande Notícias / Ascom municipal · 10/11/2026 · matrículas 2027",
+      "url": "https://lagoagrandenoticias.com/2026/11/10/educacao-em-movimento-lagoa-grande-anuncia-calendario-de-matriculas-e-rematriculas-para-2027-confira-os-prazos-por-etapa-de-ensino/"
+    },
+    {
+      "label": "CBN Recife · 10/11/2026 · vagas em cursos técnicos",
+      "url": "https://www.cbnrecife.com/2026/11/10/see-divulga-edital-para-cursos-tecnicos-subsequentes-presenciais-em-50-municipios-de-pernambuco/"
+    },
+    {
+      "label": "Terra / SEE Pernambuco · 10/11/2026 · ETE de Criatividade Musical",
+      "url": "https://www.terra.com.br/amp/noticias/educacao/carreira/selecao-em-pernambuco-abre-200-vagas-em-cursos-tecnicos-gratuitos-de-musica-confira-como-se-inscrever%2Cab41f9ded0459630f53af54dae4359236rl94ymv.html"
+    }
+  ]
+}

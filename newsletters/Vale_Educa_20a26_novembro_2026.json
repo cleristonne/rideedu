@@ -1,0 +1,314 @@
+{
+  "id": "2026-11-20_26",
+  "weekLabel": "Semana de 20 a 26 de novembro de 2026",
+  "shortDate": "20 a 26 nov. 2026",
+  "footerStamp": "Edição de 26/11/2026",
+  "footerSource": "Fonte editorial: Vale Educa · 20 a 26 de novembro de 2026",
+  "agendaSub": "Prazos para gestores e famílias",
+  "dateLabel": "26 de novembro de 2026",
+  "stats": [
+    {
+      "rubric": "VAAR 2027",
+      "value": "5/5",
+      "label": "condicionalidades com resultados disponíveis",
+      "color": "blue"
+    },
+    {
+      "rubric": "Bahia · SABE",
+      "value": "04/12",
+      "label": "encerramento previsto da aplicação",
+      "color": "green"
+    },
+    {
+      "rubric": "Pernambuco",
+      "value": "52.603",
+      "label": "vagas estaduais nesta etapa",
+      "color": "amber"
+    },
+    {
+      "rubric": "Juazeiro",
+      "value": "18/12",
+      "label": "prazo de renovação municipal",
+      "color": "terra"
+    }
+  ],
+  "spotlight": {
+    "rubric": "Capa · Financiamento",
+    "title": "VAAR 2027: municípios já podem consultar resultados e devem avaliar riscos para o orçamento da educação",
+    "dek": "Resultados no Simec permitem diagnóstico por rede; habilitação não assegura repasse."
+  },
+  "editorial": {
+    "rubric": "Editorial · Vale Educa",
+    "title": "O VAAR deve orientar o planejamento, não apenas a habilitação",
+    "byline": "Redação RIDE EDU",
+    "place": "26 de novembro de 2026",
+    "paragraphs": [
+      "A divulgação das condicionalidades chega durante a preparação do orçamento de 2027. O resultado precisa ser examinado conjuntamente pelas equipes pedagógicas e financeiras, distinguindo requisitos de habilitação, indicadores e valores efetivamente distribuídos.",
+      "O diagnóstico deve identificar as desigualdades que persistem entre escolas e grupos de estudantes. A resposta administrativa a um requisito descumprido precisa ser acompanhada de medidas pedagógicas e de gestão capazes de alterar as condições que produziram o resultado.",
+      "A transparência começa pela divulgação responsável dos resultados de cada rede, sem confundir habilitação com garantia de receita."
+    ]
+  },
+  "sections": [
+    {
+      "kicker": "Capa e Brasil",
+      "title": "Financiamento e políticas nacionais",
+      "stories": [
+        {
+          "rubric": "Brasil · Fundeb · 25/11",
+          "title": "VAAR 2027: municípios já podem consultar resultados e devem avaliar riscos para o orçamento da educação",
+          "paragraphs": [
+            "As secretarias de Educação já podem consultar no Simec os resultados das cinco condicionalidades e dos indicadores de atendimento e de melhoria da aprendizagem do ciclo 2026/2027. A CNM informou em 25 de novembro que as duas últimas condicionalidades (II e III) estavam disponíveis, completando a divulgação iniciada na semana anterior.",
+            "O cumprimento das cinco exigências habilita a rede a participar da distribuição, mas não garante, por si só, o repasse. A distribuição depende também dos indicadores e da metodologia aplicável. Segundo a Federação Goiana de Municípios, a relação oficial das redes que poderão receber a complementação deverá ser publicada pelo FNDE até o final de dezembro.",
+            "O que conferir: I — provimento de gestores escolares por mérito e desempenho ou escolha com avaliação prévia; II — participação mínima de 80% dos estudantes de cada ano avaliado nas avaliações nacionais; III — redução das desigualdades socioeconômicas e raciais; IV — regime de colaboração e critérios educacionais do ICMS; V — referenciais curriculares alinhados à BNCC.",
+            "As equipes devem acessar <a href=\"https://simec.mec.gov.br/\" target=\"_blank\">Simec</a> → Fundeb – VAAR – Condicionalidades → Situação, guardar o resultado de cada requisito e indicador, conferir eventuais inconsistências com os responsáveis técnicos e buscar orientação do MEC pelos canais oficiais. Não pressupor abertura de recurso sem ato específico.",
+            "Para os oito municípios da RIDE, a redação não dispõe de resultados individuais autenticados. Não se pode inferir a habilitação de 2027 pela lista de 2026. Na elaboração da programação financeira, simular cenários com e sem VAAR e aguardar o ato oficial antes de incorporar valores como receita confirmada."
+          ],
+          "sourceLabel": "CNM",
+          "sourceUrl": "https://cnm.org.br/comunicacao/noticias/municipios-ja-podem-consultar-resultados-completos-da-complementacao-vaar-do-fundeb",
+          "published": "25/11/2026",
+          "service": "Reunir educação, planejamento e finanças; registrar o diagnóstico e acompanhar a divulgação definitiva.",
+          "photo": "https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2026-11/Fotos%20ilustrativa%20Mateus%20PereiraSEC.jpeg",
+          "credit": "Imagem ilustrativa da rede estadual baiana — Mateus Pereira/Ascom SEC (fonte fotográfica: Secom Bahia)",
+          "photoSource": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385931/mec-amplia-verba-por-aluno-na-bahia-por-avancos-em-aprendizagem-atendimento"
+        },
+        {
+          "rubric": "Brasil · 25/11",
+          "title": "Câmara aprova marco da educação em tempo integral; texto segue ao Senado",
+          "paragraphs": [
+            "A proposta prevê jornada mínima de sete horas diárias ou 35 horas semanais e planejamento da expansão com previsão de custos, infraestrutura, alimentação e transporte. O texto ainda depende de tramitação no Senado e não deve ser tratado como lei vigente."
+          ],
+          "sourceLabel": "CNN Brasil",
+          "sourceUrl": "https://www.cnnbrasil.com.br/politica/camara-aprova-regras-para-escolas-publicas-em-tempo-integral/",
+          "published": "25/11/2026",
+          "service": "Estimar custos recorrentes por escola e preservar a oferta noturna e da EJA.",
+          "photo": "",
+          "credit": ""
+        },
+        {
+          "rubric": "Brasil · 25/11",
+          "title": "MEC detalha orientações para inteligência artificial na educação básica",
+          "paragraphs": [
+            "Em publicação de 25 de novembro, o governo detalhou as diretrizes homologadas em 10 de novembro. Na educação infantil, recomenda-se restringir o uso pelos estudantes; nos anos iniciais, o acesso autônomo não é recomendado e há limites ao uso generativo. Nos anos finais, ferramentas generativas exigem supervisão docente. O MEC e a Unesco promovem em 30 de novembro painéis sobre IA na educação básica."
+          ],
+          "sourceLabel": "Secom federal / MEC",
+          "sourceUrl": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/novas-regras-do-mec-orientam-uso-etico-e-progressivo-da-ia-no-ensino-basico",
+          "published": "25/11/2026",
+          "service": "Revisar orientações pedagógicas, proteção de dados e formação docente.",
+          "photo": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/novas-regras-do-mec-orientam-uso-etico-e-progressivo-da-ia-no-ensino-basico/mec_ia.jpeg/@@images/75361996-1a36-4cf8-ab0c-c604c07d0b66.jpeg",
+          "credit": "Imagem de divulgação — MEC"
+        }
+      ]
+    },
+    {
+      "kicker": "Oito municípios · pauta regional",
+      "title": "Na RIDE Petrolina–Juazeiro",
+      "stories": [
+        {
+          "rubric": "Juazeiro (BA) · 24/11",
+          "title": "Renovação de matrículas segue até 18 de dezembro",
+          "paragraphs": [
+            "A rede municipal iniciou em 23 de novembro a renovação de matrículas para 2027. A confirmação presencial na escola e a atualização cadastral são necessárias para garantir a vaga. A continuidade em outra unidade, quando a escola não oferece a série seguinte, deve ser solicitada até 27 de novembro; transferências internas podem ser requeridas até 18 de dezembro."
+          ],
+          "sourceLabel": "Blog do Farnésio / Ascom PMJ",
+          "sourceUrl": "https://blogdofarnesio.com.br/2026/11/estudantes-da-rede-municipal-de-ensino-de-juazeiro-ja-podem-renovar-sua-matricula-leia-ate-quando/",
+          "published": "24/11/2026",
+          "service": "Acompanhar estudantes sem confirmação e orientar famílias pelo portal <a href=\"https://matricula.juazeiro.ba.gov.br/\">Educajuá</a>.",
+          "photo": "",
+          "credit": ""
+        },
+        {
+          "rubric": "Petrolina (PE) · 23/11",
+          "title": "Rede inicia matrícula prioritária para público da educação especial",
+          "paragraphs": [
+            "A Secretaria Municipal de Educação, Cultura e Esportes abriu a etapa prioritária para estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação."
+          ],
+          "sourceLabel": "CBN Recife / Blog do Elielson",
+          "sourceUrl": "https://www.cbnrecife.com/blogdoelielson/2026/11/23/prefeitura-de-petrolina-inicia-matricula-prioritaria-para-estudantes-com-deficiencia-e-altas-habilidades/",
+          "published": "23/11/2026",
+          "service": "Orientar famílias pelos canais da Seduce e planejar acessibilidade e atendimento educacional especializado.",
+          "photo": "",
+          "credit": ""
+        }
+      ]
+    },
+    {
+      "kicker": "Redes estaduais",
+      "title": "Bahia e Pernambuco",
+      "stories": [
+        {
+          "rubric": "Bahia · 25/11",
+          "title": "Rede estadual anuncia cumprimento das cinco condicionalidades do VAAR",
+          "paragraphs": [
+            "A Secretaria da Educação da Bahia informou que a rede estadual cumpriu os cinco requisitos de habilitação. O resultado se refere à rede estadual, não às redes municipais baianas. Os valores definitivos dependem da publicação federal."
+          ],
+          "sourceLabel": "Secom Bahia / Ascom SEC",
+          "sourceUrl": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385931/mec-amplia-verba-por-aluno-na-bahia-por-avancos-em-aprendizagem-atendimento",
+          "published": "25/11/2026",
+          "service": "Consultar separadamente os resultados de cada rede municipal.",
+          "photo": "https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2026-11/Fotos%20ilustrativa%20Mateus%20PereiraSEC.jpeg",
+          "credit": "Imagem ilustrativa — Mateus Pereira/Ascom SEC"
+        },
+        {
+          "rubric": "Bahia · 23/11",
+          "title": "SABE começa em todos os municípios baianos",
+          "paragraphs": [
+            "As avaliações seguem até 4 de dezembro. A aplicação somativa contempla 2º, 5º e 9º anos do ensino fundamental e 3ª série do ensino médio estadual. Há também avaliação de fluência leitora no 3º ano do fundamental."
+          ],
+          "sourceLabel": "Secom Bahia / SEC",
+          "sourceUrl": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385805/sec-inicia-aplicacao-das-provas-do-sabe-2026-nesta-segunda-feira",
+          "published": "23/11/2026",
+          "service": "Assegurar participação e usar os resultados para diagnóstico pedagógico.",
+          "photo": "https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2026-11/Foto%20ilustrativa%20Mateus%20PereiraSEC%20%284%29.jpeg",
+          "credit": "Imagem ilustrativa — Mateus Pereira/SEC"
+        },
+        {
+          "rubric": "Bahia · 23/11",
+          "title": "Renovação estadual termina em 27 de novembro",
+          "paragraphs": [
+            "Estudantes com 16 anos ou mais podem renovar a matrícula pelo portal ba.gov.br; responsáveis por menores de 16 anos devem procurar a escola."
+          ],
+          "sourceLabel": "Secom Bahia / SEC",
+          "sourceUrl": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385840/renovacao-de-matricula-na-rede-estadual-pode-ser-feita-de-forma-line-ate-27",
+          "published": "23/11/2026",
+          "service": "Identificar estudantes com dificuldades de acesso digital.",
+          "photo": "https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2026-11/Cr%C3%A9dito%20Elias%20Macieis%20%281%29.jpeg",
+          "credit": "Elias Macieis/Ascom SEC"
+        },
+        {
+          "rubric": "Pernambuco · 25/11",
+          "title": "Rede estadual abre cadastro para 52.603 vagas",
+          "paragraphs": [
+            "O cadastro para novos estudantes segue até 25 de dezembro no Matrícula Rápida. A confirmação presencial será de 4 a 15 de janeiro. Entre as vagas disponíveis nesta etapa, 23.108 são destinadas às escolas de tempo integral."
+          ],
+          "sourceLabel": "SEE Pernambuco",
+          "sourceUrl": "https://portal.educacao.pe.gov.br/matriculas-abertas-para-o-ano-letivo-de-2027-na-rede-estadual/",
+          "published": "25/11/2026",
+          "service": "Orientar as famílias pelo <a href=\"https://www.matricularapida.pe.gov.br/\">Matrícula Rápida</a>.",
+          "photo": "",
+          "credit": ""
+        },
+        {
+          "rubric": "Bahia · 24/11",
+          "title": "Seminário debate protocolos de enfrentamento às violências nas escolas",
+          "paragraphs": [
+            "Encontro da SEC em Salvador reúne gestores e coordenadores pedagógicos até 26 de novembro para discutir educação antirracista e inclusiva. A secretaria anunciou dois protocolos voltados ao enfrentamento das violências raciais e de gênero."
+          ],
+          "sourceLabel": "Secom Bahia / SEC",
+          "sourceUrl": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385890/seminario-em-salvador-debate-caminhos-para-fortalecer-educacao-antirracista",
+          "published": "24/11/2026",
+          "service": "Incorporar protocolos à formação e aos procedimentos cotidianos das escolas.",
+          "photo": "https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2026-11/Fotos%20Viviane%20Mac%C3%AAdo.jpeg",
+          "credit": "Viviane Macêdo/SEC"
+        }
+      ]
+    }
+  ],
+  "agenda": [
+    {
+      "day": "27",
+      "month": "nov",
+      "kind": "ate",
+      "tag": "Prazo",
+      "label": "Bahia e Juazeiro",
+      "text": "Renovação estadual e solicitação de continuidade municipal."
+    },
+    {
+      "day": "04",
+      "month": "dez",
+      "kind": "ate",
+      "tag": "Avaliação",
+      "label": "SABE",
+      "text": "Encerramento previsto das aplicações."
+    },
+    {
+      "day": "18",
+      "month": "dez",
+      "kind": "ate",
+      "tag": "Prazo",
+      "label": "Juazeiro",
+      "text": "Renovação e transferência na rede municipal."
+    },
+    {
+      "day": "25",
+      "month": "dez",
+      "kind": "ate",
+      "tag": "Prazo",
+      "label": "Pernambuco",
+      "text": "Cadastro escolar estadual."
+    },
+    {
+      "display": "Dezembro",
+      "kind": "previsto",
+      "tag": "Acompanhar",
+      "label": "VAAR 2027",
+      "text": "Publicação oficial das redes beneficiárias."
+    }
+  ],
+  "themes": [
+    [
+      "Financiamento",
+      "Habilitação e receita são etapas diferentes."
+    ],
+    [
+      "Equidade",
+      "Acompanhar desigualdades entre grupos e escolas."
+    ],
+    [
+      "Acesso",
+      "Monitorar renovação e transição entre redes."
+    ]
+  ],
+  "sources": [
+    {
+      "label": "CNM · VAAR 2027: municípios já podem consultar resultados e devem avaliar riscos para o orçamento da educação",
+      "url": "https://cnm.org.br/comunicacao/noticias/municipios-ja-podem-consultar-resultados-completos-da-complementacao-vaar-do-fundeb"
+    },
+    {
+      "label": "CNN Brasil · Câmara aprova marco da educação em tempo integral; texto segue ao Senado",
+      "url": "https://www.cnnbrasil.com.br/politica/camara-aprova-regras-para-escolas-publicas-em-tempo-integral/"
+    },
+    {
+      "label": "Secom federal / MEC · MEC detalha orientações para inteligência artificial na educação básica",
+      "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/11/novas-regras-do-mec-orientam-uso-etico-e-progressivo-da-ia-no-ensino-basico"
+    },
+    {
+      "label": "Blog do Farnésio / Ascom PMJ · Renovação de matrículas segue até 18 de dezembro",
+      "url": "https://blogdofarnesio.com.br/2026/11/estudantes-da-rede-municipal-de-ensino-de-juazeiro-ja-podem-renovar-sua-matricula-leia-ate-quando/"
+    },
+    {
+      "label": "CBN Recife / Blog do Elielson · Rede inicia matrícula prioritária para público da educação especial",
+      "url": "https://www.cbnrecife.com/blogdoelielson/2026/11/23/prefeitura-de-petrolina-inicia-matricula-prioritaria-para-estudantes-com-deficiencia-e-altas-habilidades/"
+    },
+    {
+      "label": "Secom Bahia / Ascom SEC · Rede estadual anuncia cumprimento das cinco condicionalidades do VAAR",
+      "url": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385931/mec-amplia-verba-por-aluno-na-bahia-por-avancos-em-aprendizagem-atendimento"
+    },
+    {
+      "label": "Secom Bahia / SEC · SABE começa em todos os municípios baianos",
+      "url": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385805/sec-inicia-aplicacao-das-provas-do-sabe-2026-nesta-segunda-feira"
+    },
+    {
+      "label": "Secom Bahia / SEC · Renovação estadual termina em 27 de novembro",
+      "url": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385840/renovacao-de-matricula-na-rede-estadual-pode-ser-feita-de-forma-line-ate-27"
+    },
+    {
+      "label": "SEE Pernambuco · Rede estadual abre cadastro para 52.603 vagas",
+      "url": "https://portal.educacao.pe.gov.br/matriculas-abertas-para-o-ano-letivo-de-2027-na-rede-estadual/"
+    },
+    {
+      "label": "Secom Bahia / SEC · Seminário debate protocolos de enfrentamento às violências nas escolas",
+      "url": "https://www.ba.gov.br/comunicacao/noticias/2026-11/385890/seminario-em-salvador-debate-caminhos-para-fortalecer-educacao-antirracista"
+    },
+    {
+      "label": "FGM · previsão da divulgação oficial",
+      "url": "https://www.fgm-go.org.br/Imprensa/Noticias/Vaar-2027-municipios-ja-podem-consultar-no-simec-os-resultados-das-condicionalidades-e-dos-indicadores-1303/"
+    }
+  ],
+  "documentWeek": {
+    "rubric": "Documento da semana",
+    "title": "Consulta do VAAR 2027 no Simec",
+    "body": "Acesse o sistema para conferir os resultados de sua rede.",
+    "link": "https://simec.mec.gov.br/",
+    "linkLabel": "Acessar Simec"
+  }
+}
