@@ -69,3 +69,5 @@ body.mt-page main::before,body.mt-page main::after{display:none !important}
   .mt-main{padding:0}
   .mt-body p{font-size:13pt !important}
 }
+.mt-crumbs a.mt-marca{display:inline-flex;align-items:center;gap:6px;align-self:center}
+.mt-crumbs a.mt-marca img{width:18px;height:18px;display:block}
