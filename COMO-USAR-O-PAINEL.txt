@@ -19,7 +19,12 @@ CONFIGURAÇÃO (UMA VEZ SÓ, CERCA DE 30 MINUTOS)
 1. GUARDAR O SITE NO GITHUB
    a) Crie uma conta em https://github.com (se ainda não tiver).
    b) Crie um repositório: botão "New", nome "rideedu", marque
-      "Private" (privado) e clique em "Create repository".
+      "Public" (público) e clique em "Create repository".
+      Atenção: no plano gratuito do Netlify, repositório PRIVADO só
+      publica alterações de contas do GitHub reconhecidas pelo Netlify
+      (erro "Unrecognized Git contributor"). Por isso o rideedu ficou
+      público (27/11/2026). Ele só contém o que o site já mostra;
+      senhas e o client secret ficam no Netlify, nunca no repositório.
    c) Envie os arquivos desta pasta para o repositório. O mais fácil
       é o programa GitHub Desktop (https://desktop.github.com):
       File > Add local repository > escolher esta pasta > "create a
