@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-label="Margens: educação no Vale do São Francisco">
+  <!-- Margens · logotipo horizontal. Fontes: Newsreader e Inter (Google Fonts).
+       Para uso fora do site (gráfica, redes), prefira os PNGs em marca/png/. -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;family=Newsreader:opsz,wght@6..72,600&amp;display=swap');
+    .nome{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:70px;letter-spacing:-2px;fill:#1F2A33}
+    .linha{font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:2.3px;fill:#0A6E99}
+  </style>
+  <svg x="10" y="12" width="96" height="96" viewBox="0 0 100 100">
+    <defs><clipPath id="m-circ"><circle cx="50" cy="50" r="48"/></clipPath></defs>
+    <g clip-path="url(#m-circ)">
+      <rect width="100" height="100" fill="#1F2A33"/>
+      <path d="M-8,34 C18,14 34,30 50,50 S82,90 108,66 L108,-8 L-8,-8 Z" fill="#D99A2B"/>
+      <path d="M-8,34 C18,14 34,30 50,50 S82,90 108,66" fill="none" stroke="#FFFFFF" stroke-width="19"/>
+      <path d="M-8,34 C18,14 34,30 50,50 S82,90 108,66" fill="none" stroke="#0A6E99" stroke-width="12"/>
+    </g>
+  </svg>
+  <text class="nome" x="124" y="70">Margens</text>
+  <text class="linha" x="127" y="97">EDUCAÇÃO NO VALE DO SÃO FRANCISCO</text>
+</svg>
