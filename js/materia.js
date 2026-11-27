@@ -97,7 +97,7 @@
       var o = ed.editorial;
       titulo = texto(o.title);
       html =
-        '<nav class="mt-crumbs" aria-label="Você está em"><a href="index.html">Margens</a><span aria-hidden="true">›</span><span>opinião</span></nav>' +
+        '<nav class="mt-crumbs" aria-label="Você está em"><a class="mt-marca" href="index.html"><img src="marca/margens-simbolo.svg" alt="" width="18" height="18">Margens</a><span aria-hidden="true">›</span><span>opinião</span></nav>' +
         '<div class="mt-kicker">' + (o.rubric || "Editorial") + "</div>" +
         '<h1 class="mt-title mt-title-ed">' + o.title + "</h1>" +
         '<div class="mt-meta"><div><strong>' + (o.byline || "") + "</strong>" + (o.place ? " · " + o.place : "") + "<br>" + linhaEdicao + "</div>" + barraCompartilhar(titulo) + "</div>" +
@@ -112,7 +112,7 @@
       var paras = (st.paragraphs || [st.body || ""]).filter(Boolean);
       var servico = st.service ? String(st.service).replace(/^Para gestores?:\s*/i, "") : "";
       html =
-        '<nav class="mt-crumbs" aria-label="Você está em"><a href="index.html">Margens</a>' +
+        '<nav class="mt-crumbs" aria-label="Você está em"><a class="mt-marca" href="index.html"><img src="marca/margens-simbolo.svg" alt="" width="18" height="18">Margens</a>' +
         (sec && sec.title ? '<span aria-hidden="true">›</span><span>' + sec.title + "</span>" : "") + "</nav>" +
         '<div class="mt-kicker">' + (st.rubric || "") + "</div>" +
         '<h1 class="mt-title">' + st.title + "</h1>" +
