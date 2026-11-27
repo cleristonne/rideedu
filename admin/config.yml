@@ -19,7 +19,7 @@ local_backend: true
 locale: pt
 site_url: https://rideedu.com.br
 display_url: https://rideedu.com.br
-logo_url: /logo-ride-edu.png
+logo_url: /marca/png/margens-logo.png
 
 # Fotos enviadas pelo painel
 media_folder: newsletters/fotos
