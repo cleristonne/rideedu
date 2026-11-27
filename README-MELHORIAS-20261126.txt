@@ -300,3 +300,17 @@ SÉTIMA ETAPA — PAINEL DE EDIÇÃO (/admin)
    admin/formato-margens.js, newsletters/lista.js,
    newsletters/carregar.js, newsletters/fotos/, ferramentas/gerar-lista.js,
    COMO-USAR-O-PAINEL.txt, .gitignore.
+
+21. LOGOTIPO DO MARGENS (27/11/2026)
+   - Símbolo: o rio São Francisco (faixa azul) entre as duas margens,
+     grafite e ocre, dentro de um círculo. Nome em Newsreader; linha de
+     apoio "Educação no Vale do São Francisco" em Inter, caixa alta azul.
+   - Aplicado no cabeçalho do noticiário (index.html, css/noticioso.css),
+     na página da reportagem (ícone da aba e "Margens" no topo) e no
+     painel de edição (tela de entrada e ícone).
+   - O ícone geral do site (favicon.svg) continua o do RIDE EDU.
+   - Arquivos em marca/: margens-simbolo.svg, margens-logo.svg,
+     apresentacao.html (versões, cores e tipografia) e marca/png/
+     (logo 2240x480, símbolo 512 e 1024, ícone 180). Fora do site,
+     use os PNGs: o SVG do logotipo depende das fontes da internet.
+   - Cores: grafite #1F2A33, azul #0A6E99, ocre #D99A2B, areia #F6F1E7.
